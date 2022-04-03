@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Users\media\source\repos\HTCHome\Widgets\CalendarWidget\obj\Debug\
+C:\Users\media\source\repos\mediaexplorer74\HTCHome\Widgets\CalendarWidget\obj\Debug\
 CalendarWidget
 none
 false
@@ -12,9 +12,9 @@ DEBUG;TRACE
 
 5451252065
 6-2087368046
-12-1939610502
-221260969767
+13-17832381
+22-505966969
 AgendaItem.xaml;AgendaView.xaml;Calendar.xaml;CalendarControl.xaml;Options.xaml;
 
-False
+True
 
