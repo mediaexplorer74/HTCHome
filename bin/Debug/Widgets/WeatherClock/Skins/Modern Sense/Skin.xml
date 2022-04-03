@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Skin>
+  <Author>Stealth</Author>
+  <Version>2.1</Version>
+  <Name>Modern Sense</Name>
+  <Contacts>stealth2008@live.ru</Contacts>
+  <Description>Updated version of Sense skin</Description>
+  <UseClockAnimation>True</UseClockAnimation>
+  <!-- Widget region. Used for Aero Glass. -1 disables aero -->
+  <Region>
+    <Left>105</Left>
+    <Top>31</Top>
+    <Right>400</Right>
+    <Bottom>200</Bottom>
+    <RadiusX>10</RadiusX>
+    <RadiusY>10</RadiusY>
+</Region>
+</Skin>

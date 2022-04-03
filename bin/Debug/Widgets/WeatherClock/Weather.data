@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WeatherReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <High>0</High>
+  <Location>New York</Location>
+  <Low>0</Low>
+  <NowSkyCode>1</NowSkyCode>
+  <NowTemp>0</NowTemp>
+  <Forecast />
+</WeatherReport>

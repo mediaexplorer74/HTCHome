@@ -1,0 +1,7 @@
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Music\Winamp\Winamp.dll
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Music\Winamp\Winamp.pdb
+C:\Users\media\source\repos\HTCHome\Extensions\Music\Winamp\obj\Debug\Winamp.csproj.AssemblyReference.cache
+C:\Users\media\source\repos\HTCHome\Extensions\Music\Winamp\obj\Debug\Winamp.csproj.CoreCompileInputs.cache
+C:\Users\media\source\repos\HTCHome\Extensions\Music\Winamp\obj\Debug\Winamp.csproj.CopyComplete
+C:\Users\media\source\repos\HTCHome\Extensions\Music\Winamp\obj\Debug\Winamp.dll
+C:\Users\media\source\repos\HTCHome\Extensions\Music\Winamp\obj\Debug\Winamp.pdb

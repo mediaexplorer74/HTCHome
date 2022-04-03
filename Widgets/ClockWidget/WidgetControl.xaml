@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="ClockWidget.WidgetControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Style="{DynamicResource WidgetStyle}"
+             MouseLeftButtonDown="UserControl_MouseLeftButtonDown">
+    <UserControl.Resources>
+        <ResourceDictionary x:Name="Skin"/>
+    </UserControl.Resources>
+    <UserControl.RenderTransform>
+        <ScaleTransform x:Name="Scale" />
+    </UserControl.RenderTransform>
+    <Grid>
+        <Image Name="ClockBase" Source="Resources/clock_base.png" Style="{DynamicResource ClockBase}"/>
+        <Grid Style="{DynamicResource DayGrid}">
+            <TextBlock Text="{Binding ElementName=Day, Path=Text}" Style="{DynamicResource DayShadow}"/>
+            <TextBlock Name="Day" Text="MON" Style="{DynamicResource Day}"/>
+        </Grid>
+        <Grid Style="{DynamicResource MonthGrid}">
+            <TextBlock Text="{Binding ElementName=Month, Path=Text}" Style="{DynamicResource MonthShadow}"/>
+            <TextBlock Name="Month" Text="JAN 1" Style="{DynamicResource Month}"/>
+        </Grid>
+        <Grid Style="{DynamicResource AmPmGrid}">
+            <TextBlock Text="{Binding ElementName=AmPm, Path=Text}" Style="{DynamicResource AmPmShadow}"/>
+            <TextBlock Name="AmPm" Text="AM" Style="{DynamicResource AmPm}"/>
+        </Grid>
+        <Image Name="ClockHour" Source="Resources/clock_hour.png" Style="{DynamicResource ClockHour}">
+            <Image.RenderTransform>
+                <RotateTransform x:Name="HourRotate"/>
+            </Image.RenderTransform>
+        </Image>
+        <Image Name="ClockMinute" Source="Resources/clock_minute.png" Style="{DynamicResource ClockMinute}">
+            <Image.RenderTransform>
+                <RotateTransform x:Name="MinuteRotate"/>
+            </Image.RenderTransform>
+        </Image>
+        <Image Name="ClockSecond" Source="Resources/clock_second.png" Style="{DynamicResource ClockSecond}">
+            <Image.RenderTransform>
+                <RotateTransform x:Name="SecondRotate"/>
+            </Image.RenderTransform>
+        </Image>
+        <Image Name="ClockDot" Source="Resources/clock_center_dot.png" Style="{DynamicResource ClockDot}"/>
+    </Grid>
+</UserControl>

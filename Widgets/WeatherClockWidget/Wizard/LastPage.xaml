@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="WeatherClockWidget.Wizard.LastPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <ResourceDictionary Source="./Block.xaml"/>
+    </UserControl.Resources>
+    <Grid>
+        <UserControl Style="{StaticResource Block}" Margin="0,0,0,40"/>
+        <StackPanel Margin="0,0,0,40">
+            <TextBlock Name="Title" Text="Finish!" HorizontalAlignment="Center" Margin="0,15,0,0" FontSize="22" Foreground="Gray"/>
+            <TextBlock Name="String1" Text="That's all for now. You can start using Weather/Clock widget. You can always change these setting by clicking Options on widget's context menu."  Margin="10,10,10,0" FontSize="14" TextWrapping="Wrap"/>
+            <TextBlock Margin="10,20,10,0" FontSize="14" TextWrapping="Wrap" VerticalAlignment="Bottom">
+                <Run Name="String2_1">Check our</Run><Hyperlink Name="Link" NavigateUri="http://htchome.org/forum" Foreground="#FF006CAD" PreviewMouseLeftButtonDown="Link_PreviewMouseLeftButtonDown"><Run Name="String2_3">forum</Run></Hyperlink><Run Name="String2_2">for additional providers and skins.</Run>
+            </TextBlock>
+        </StackPanel>
+        <Image Name="Icon" Width="150" Height="150" VerticalAlignment="Center"/>
+        <TextBlock FontSize="14" Foreground="CornflowerBlue" Cursor="Hand" Text="www.htchome.org" VerticalAlignment="Center" Margin="0,140,0,0" HorizontalAlignment="Center" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"/>
+        <Button Name="CloseButton" Content="Close" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,10" Width="75" Height="23" Click="CloseButton_Click"/>
+    </Grid>
+</UserControl>

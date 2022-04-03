@@ -1,0 +1,76 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+    <s:String x:Key="LocaleCode">en-US</s:String>
+    <s:String x:Key="LocaleName">English</s:String>
+    <s:String x:Key="LocaleAuthor">Stealth</s:String>
+    <!-- General strings -->
+    <s:String x:Key="H">H:</s:String>
+    <s:String x:Key="L">L:</s:String>
+    <s:String x:Key="Today">Today</s:String>
+    <s:String x:Key="Tomorrow">Tomorrow</s:String>
+    <!-- Menu strings -->
+    <s:String x:Key="Refresh">Refresh</s:String>
+    <s:String x:Key="Options">Widget settings</s:String>
+    <s:String x:Key="LastResults">Last locations</s:String>
+    <s:String x:Key="Close">Close</s:String>
+    <!-- Options strings -->
+    <s:String x:Key="Title">Settings</s:String>
+    <s:String x:Key="General">General</s:String>
+    <s:String x:Key="Advanced">Advanced</s:String>
+    <s:String x:Key="Skin">Skin</s:String>
+    <s:String x:Key="AboutWidget">About</s:String>
+    <s:String x:Key="Location">Location</s:String>
+    <s:String x:Key="Reset">Reset</s:String>
+    <s:String x:Key="OK">OK</s:String>
+    <s:String x:Key="Cancel">Cancel</s:String>
+    <s:String x:Key="Apply">Apply</s:String>
+    <s:String x:Key="ShowTaskbarIcon">Show icon on taskbar</s:String>
+    <s:String x:Key="ShowWeather">Show weather</s:String>
+    <s:String x:Key="ShowForecast">Show 5-day forecast</s:String>
+    <s:String x:Key="EnableSounds">Enable weather sounds</s:String>
+    <s:String x:Key="CurrentLocationText">Current location:</s:String>
+    <s:String x:Key="TypeLocationText">Type the name of your city:</s:String>
+    <s:String x:Key="NoResults">No cities found. Try another weather provider.</s:String>
+    <s:String x:Key="Interval">Interval (minutes):</s:String>
+    <s:String x:Key="ChangeBg">Change widget background with weather</s:String>
+    <s:String x:Key="EnableWallpaperChanging">Change desktop wallpaper with weather</s:String>
+    <s:String x:Key="WallpapersFolder">Wallpapers folder:</s:String>
+    <s:String x:Key="EnableWeather">Show weather</s:String>
+    <s:String x:Key="EnableWeatherAnimation">Enable weather animation</s:String>
+    <s:String x:Key="WeatherProvider">Weather provider:</s:String>
+    <s:String x:Key="RestartText">Some settings will be applied after restart.</s:String>
+    <s:String x:Key="ProviderChangedText">After changing weather provider you need to specify your location again.</s:String>
+    <s:String x:Key="ShowTempIn">Show temperature in:</s:String>
+    <s:String x:Key="Fahrenheit">Fahrenheit</s:String>
+    <s:String x:Key="Celsius">Celsius</s:String>
+    <s:String x:Key="TimeMode">Time format:</s:String>
+    <s:String x:Key="TimeMode1">24 hours</s:String>
+    <s:String x:Key="TimeMode2">12 hours</s:String>
+    <s:String x:Key="CurrentLocation">Current location:</s:String>
+    <s:String x:Key="DetectLocation">Automatically detect location:</s:String>
+    <s:String x:Key="Author">Author:</s:String>
+    <s:String x:Key="Version">Version:</s:String>
+    <s:String x:Key="Contacts">Contacts:</s:String>
+    
+    <!-- Wizard strings -->
+    <s:String x:Key="Skip">Skip</s:String>
+    <s:String x:Key="Next">Next</s:String>
+    <!-- Page1 -->
+    <s:String x:Key="Page1Title">Welcome to Weather/Clock widget!</s:String>
+    <s:String x:Key="Page1String1">This wizard will help you to setup widget for your needs. Click next to continue.</s:String>
+    <s:String x:Key="Page1String2">You can also skip this wizard by clicking Skip button. Then default options will be applied.</s:String>
+    <!-- Page2 -->
+    <s:String x:Key="Page2Title">Location &amp; Provider</s:String>
+    <s:String x:Key="Page2String1">Please select a preferred weather provider:</s:String>
+    <s:String x:Key="Page2String2">Please type the name of your location (in English):</s:String>
+    <!-- Page3 -->
+    <s:String x:Key="Page3Title">Misc</s:String>
+    <s:String x:Key="Page3String1">Would you like to see the current temperature in taskbar?</s:String>
+    <s:String x:Key="Page3String2">Show icon on taskbar (only for Windows 7)</s:String>
+    <!-- LastPage -->
+    <s:String x:Key="LastPageTitle">Finish!</s:String>
+    <s:String x:Key="LastPageString1">That's all for now. You can start using Weather/Clock widget. You can always change these setting by clicking Options on widget's context menu.</s:String>
+    <s:String x:Key="LastPageString2">Check our {0} for additional providers and skins.</s:String>
+    <s:String x:Key="LastPageString3">forum</s:String>
+</ResourceDictionary>

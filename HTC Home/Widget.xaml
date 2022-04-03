@@ -1,0 +1,51 @@
+﻿<Window x:Class="HTCHome.Widget"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Background="Transparent" AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize" ShowInTaskbar="False" AllowDrop="True"
+        MouseMove="Window_MouseMove" SourceInitialized="Window_SourceInitialized" Closing="Window_Closing" MouseEnter="Window_MouseEnter" MouseLeave="Window_MouseLeave"
+        DragEnter="Window_DragEnter" Drop="Window_Drop" Opacity="0">
+    <Window.Resources>
+        <Storyboard x:Key="LoadAnim" Completed="Storyboard_Completed">
+                    <!--<DoubleAnimation Storyboard.TargetProperty="Top" Duration="0:0:0.5" DecelerationRatio="0.3" FillBehavior="Stop"/>-->
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.5"/>
+        </Storyboard>
+        <Storyboard x:Key="MouseEnter">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.3" FillBehavior="Stop" Completed="MouseEnter_Completed"/>
+        </Storyboard>
+        <Storyboard x:Key="MouseLeave">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" Duration="0:0:0.3" FillBehavior="Stop" Completed="MouseLeave_Completed"/>
+        </Storyboard>
+    </Window.Resources>
+    <Window.ContextMenu>
+        <ContextMenu HasDropShadow="True" Opened="ContextMenu_Opened">
+            <MenuItem Name="TopMostItem" Header="Top most" Checked="TopMostItem_Checked" Unchecked="TopMostItem_Unchecked" IsCheckable="True"/>
+            <MenuItem Name="PinItem" Header="Pin" IsCheckable="True" Checked="PinItem_Checked" Unchecked="PinItem_Unchecked"/>
+            <MenuItem Name="SizeItem" Header="Size" IsEnabled="False" Foreground="Black"/>
+            <Slider Name="SizeSlider" Margin="0,0,-30,0" Orientation="Horizontal" Minimum="30" Maximum="100" SmallChange="0.05" Value="100" ValueChanged="SizeSlider_ValueChanged" TickPlacement="TopLeft" TickFrequency="10" AutoToolTipPlacement="TopLeft" />
+            <MenuItem Name="OpacityItem" Header="Opacity" IsEnabled="False" Foreground="Black"/>
+            <Slider Name="OpacitySlider" Margin="0,0,-30,0" Orientation="Horizontal" Minimum="20" Maximum="100" SmallChange="0.05" Value="100" ValueChanged="OpacitySliderValueChanged"  TickPlacement="TopLeft" TickFrequency="10" AutoToolTipPlacement="TopLeft" />
+            <MenuItem Name="CloseItem" Header="Close widget" Click="CloseItem_Click"/>
+            <Separator/>
+            <StackPanel Name="AddWidgetPanel" Orientation="Horizontal" HorizontalAlignment="Center"/>
+            <Separator/>
+            <MenuItem Name="GalleryItem" Header="Widgets" Click="GalleryItemClick">
+                <MenuItem.Icon>
+                    <Image Source="Resources/icon.png" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Name="HomeOptionsItem" Header="HTC Home settings" Click="HomeOptionsItem_Click">
+                <MenuItem.Icon>
+                    <Image Source="Resources/icon.png" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Name="CloseHomeItem" Header="Close HTC Home" Click="CloseHomeItem_Click">
+                <MenuItem.Icon>
+                    <Image Source="Resources/icon.png" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+    </Window.ContextMenu>
+    <Grid Name="MainGrid">
+
+    </Grid>
+</Window>

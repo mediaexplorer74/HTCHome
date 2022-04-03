@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="CalendarWidget.AgendaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             Loaded="UserControl_Loaded">
+    <UserControl.ContextMenu>
+        <ContextMenu>
+            <MenuItem Name="AddItem" Header="Add..." Click="AddItem_Click"/>
+        </ContextMenu>
+    </UserControl.ContextMenu>
+    <Grid>
+        <Image Name="Header" Source="Resources\agenda_header.png" VerticalAlignment="Top" Height="36"/>
+        <TextBlock Name="Date" Text="Today" Foreground="LightGray" FontSize="18" Margin="10,0,0,10"/>
+        <ScrollViewer Margin="0,25,0,0" VerticalScrollBarVisibility="Hidden">
+            <StackPanel Name="ItemsPanel"/>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Skin>
+  <Author>Stealth</Author>
+  <Version>1.0</Version>
+  <Name>Travel Night</Name>
+  <Contacts>stealth2008@live.ru</Contacts>
+  <Description></Description>
+  <!-- Widget region. Used for Aero Glass. -1 disables aero -->
+  <Region>
+    <Left>-1</Left>
+    <Top>-1</Top>
+    <Right>-1</Right>
+    <Bottom>-1</Bottom>
+  </Region>
+</Skin>

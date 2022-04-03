@@ -1,0 +1,9 @@
+﻿<Application x:Class="HTCHome.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             DispatcherUnhandledException="ApplicationDispatcherUnhandledException"
+             ShutdownMode="OnExplicitShutdown"  Startup="ApplicationStartup" Exit="ApplicationExit" SessionEnding="Application_SessionEnding">
+    <Application.Resources>
+
+    </Application.Resources>
+</Application>

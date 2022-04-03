@@ -1,0 +1,77 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+    <s:String x:Key="LocaleCode">ru-RU</s:String>
+    <s:String x:Key="LocaleName">Русский</s:String>
+    <s:String x:Key="LocaleAuthor">Stealth</s:String>
+    <!-- General strings -->
+    <s:String x:Key="H">H:</s:String>
+    <s:String x:Key="L">L:</s:String>
+    <s:String x:Key="Today">Сегодня</s:String>
+    <s:String x:Key="Tomorrow">Завтра</s:String>
+    <!-- Menu strings -->
+    <s:String x:Key="Refresh">Обновить</s:String>
+    <s:String x:Key="Options">Настройки виджета</s:String>
+    <s:String x:Key="LastResults">Последние запросы</s:String>
+    <s:String x:Key="Close">Закрыть</s:String>
+    <!-- Options strings -->
+    <s:String x:Key="Title">Настройки</s:String>
+    <s:String x:Key="General">Общие</s:String>
+    <s:String x:Key="Advanced">Дополнительные</s:String>
+    <s:String x:Key="Skin">Скин</s:String>
+    <s:String x:Key="AboutWidget">О виджете</s:String>
+    <s:String x:Key="Location">Местоположение</s:String>
+    <s:String x:Key="Reset">Сбросить</s:String>
+    <s:String x:Key="OK">ОК</s:String>
+    <s:String x:Key="Cancel">Отмена</s:String>
+    <s:String x:Key="Apply">Применить</s:String>
+    <s:String x:Key="ShowTaskbarIcon">Отображать иконку на панели задач</s:String>
+    <s:String x:Key="ShowWeather">Отображать погоду</s:String>
+    <s:String x:Key="ShowForecast">Отображать 5-дневный прогноз</s:String>
+    <s:String x:Key="EnableSounds">Включить звуки погоды</s:String>
+    <s:String x:Key="CurrentLocationText">Текущее местоположение:</s:String>
+    <s:String x:Key="TypeLocationText">Введите название города (на английском):</s:String>
+    <s:String x:Key="NoResults">Не удалось найти город. Попробуйте другой провайдер погоды.</s:String>
+    <s:String x:Key="Interval">Интервал (в минутах):</s:String>
+    <s:String x:Key="ChangeBg">Менять фон виджета в соответсвии с погодой</s:String>
+    <s:String x:Key="EnableWallpaperChanging">Менять обои рабочего стола в соответствии с погодой</s:String>
+    <s:String x:Key="WallpapersFolder">Папка с обоями:</s:String>
+    <s:String x:Key="EnableWeather">Отображать погоду</s:String>
+    <s:String x:Key="EnableWeatherAnimation">Включить анимацию погоды</s:String>
+    <s:String x:Key="WeatherProvider">Провайдер погоды:</s:String>
+    <s:String x:Key="RestartText">Некоторые настройки вступят в силу после перезапуска программы</s:String>
+    <s:String x:Key="ProviderChangedText">После смены провайдера погоды, вам необходимо заново указать местоположение.</s:String>
+    <s:String x:Key="ShowTempIn">Отображать температуру в градусах:</s:String>
+    <s:String x:Key="Fahrenheit">Фаренгейта</s:String>
+    <s:String x:Key="Celsius">Цельсия</s:String>
+    <s:String x:Key="TimeMode">Формат времени:</s:String>
+    <s:String x:Key="TimeMode1">24 часа</s:String>
+    <s:String x:Key="TimeMode2">12 часов</s:String>
+    <s:String x:Key="CurrentLocation">Текущее местоположение:</s:String>
+    <s:String x:Key="EnterLocation">Введите название города (на английском):</s:String>
+    <s:String x:Key="DetectLocation">Определять местоположение автоматически:</s:String>
+    <s:String x:Key="Author">Автор:</s:String>
+    <s:String x:Key="Version">Версия:</s:String>
+    <s:String x:Key="Contacts">Контакты:</s:String>
+    
+    <!-- Wizard strings -->
+    <s:String x:Key="Skip">Пропустить</s:String>
+    <s:String x:Key="Next">Далее</s:String>
+    <!-- Page1 -->
+    <s:String x:Key="Page1Title">Добро пожаловать в виджет Weather/Clock!</s:String>
+    <s:String x:Key="Page1String1">Этот мастер поможет вам провести начальную настройку виджета. Нажмите Далее для продолжения.</s:String>
+    <s:String x:Key="Page1String2">Вы можете пропустить настройку, нажав кнопку Пропустить. При этом будут установлены настройки по умолчанию.</s:String>
+    <!-- Page2 -->
+    <s:String x:Key="Page2Title">Провайдер и местоположение</s:String>
+    <s:String x:Key="Page2String1">Пожалуйста, выберите предпочитаемый провайдер погоды:</s:String>
+    <s:String x:Key="Page2String2">Пожалуйста, укажите свое местоположение (на английском):</s:String>
+    <!-- Page3 -->
+    <s:String x:Key="Page3Title">Остальное</s:String>
+    <s:String x:Key="Page3String1">Хотели бы вы видеть температуру на панели задач?</s:String>
+    <s:String x:Key="Page3String2">Отображать иконку на панели задач (только для Windows 7)</s:String>
+    <!-- LastPage -->
+    <s:String x:Key="LastPageTitle">Финиш!</s:String>
+    <s:String x:Key="LastPageString1">Это все. Вы можете начать пользоваться виджетом Weather/Clock. Вы всегда сможете изменить эти настройки выбрав соответствующий пункт в контекстном меню виджета.</s:String>
+    <s:String x:Key="LastPageString2">Посетите наш {0}, чтобы получить дополнительные скины и провайдеров погоды.</s:String>
+    <s:String x:Key="LastPageString3">форум</s:String>
+</ResourceDictionary>

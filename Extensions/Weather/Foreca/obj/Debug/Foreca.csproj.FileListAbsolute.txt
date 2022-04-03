@@ -1,0 +1,7 @@
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Foreca.dll
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Foreca.pdb
+C:\Users\media\source\repos\HTCHome\Extensions\Weather\Foreca\obj\Debug\Foreca.csproj.AssemblyReference.cache
+C:\Users\media\source\repos\HTCHome\Extensions\Weather\Foreca\obj\Debug\Foreca.csproj.CoreCompileInputs.cache
+C:\Users\media\source\repos\HTCHome\Extensions\Weather\Foreca\obj\Debug\Foreca.csproj.CopyComplete
+C:\Users\media\source\repos\HTCHome\Extensions\Weather\Foreca\obj\Debug\Foreca.dll
+C:\Users\media\source\repos\HTCHome\Extensions\Weather\Foreca\obj\Debug\Foreca.pdb

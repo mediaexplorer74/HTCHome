@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+    <s:String x:Key="Add">Добавить</s:String>
+    <s:String x:Key="Remove">Удалить</s:String>
+    <s:String x:Key="EditTitleTooltip">Новое событие</s:String>
+    <s:String x:Key="EditInfoTooltip">Дважды нажмите сюда, чтобы изменить дополнительную информацию</s:String>
+    <s:String x:Key="Synchronize">Синхронизировать с календарем Google</s:String>
+    <s:String x:Key="Username">Имя пользователя</s:String>
+    <s:String x:Key="Password">Пароль</s:String>
+    <s:String x:Key="General">Общие</s:String>
+    <s:String x:Key="AboutWidget">О виджете</s:String>
+    <s:String x:Key="Options">Настройки</s:String>
+</ResourceDictionary>

@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+    <s:String x:Key="LocaleCode">en-US</s:String>
+    <s:String x:Key="LocaleName">English</s:String>
+    <s:String x:Key="LocaleAuthor">Stealth</s:String>
+    <!-- Menu strings -->
+    <s:String x:Key="Options">Widget settings</s:String>
+    <!-- Options strings -->
+    <s:String x:Key="Skin">Skin</s:String>
+    <s:String x:Key="AboutWidget">About</s:String>
+    <s:String x:Key="Author">Author:</s:String>
+    <s:String x:Key="Version">Version:</s:String>
+    <s:String x:Key="Contacts">Contacts:</s:String>
+    <s:String x:Key="OK">OK</s:String>
+    <s:String x:Key="Cancel">Cancel</s:String>
+    <s:String x:Key="Apply">Apply</s:String>
+</ResourceDictionary>

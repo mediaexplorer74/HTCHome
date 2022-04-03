@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Skin>
+  <Author>Stealth</Author>
+  <Version>1.1</Version>
+  <Name>Sense Wide</Name>
+  <Contacts>stealth2008@live.ru</Contacts>
+  <UseClockAnimation>True</UseClockAnimation>
+  <Description>Landscape version of Sense skin</Description>
+  <!-- Widget region. Used for Aero Glass. -1 disables aero -->
+  <Region>
+    <Left>8</Left>
+    <Top>25</Top>
+    <Right>500</Right>
+    <Bottom>163</Bottom>
+    <RadiusX>15</RadiusX>
+    <RadiusY>15</RadiusY>
+</Region>
+</Skin>

@@ -1,0 +1,435 @@
+﻿<Window x:Class="WeatherClockWidget.Options"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Background="Transparent" ResizeMode="NoResize" Height="560" Width="430" WindowStartupLocation="CenterScreen"
+        SourceInitialized="Window_SourceInitialized">
+    <Window.Resources>
+        <Style x:Key="TabItemFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="3,3,3,1" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="TabControlNormalBorderBrush" Color="Transparent"/>
+        <LinearGradientBrush x:Key="ButtonNormalBackground" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#F3F3F3" Offset="0"/>
+            <GradientStop Color="#EBEBEB" Offset="0.5"/>
+            <GradientStop Color="#DDDDDD" Offset="0.5"/>
+            <GradientStop Color="#CDCDCD" Offset="1"/>
+        </LinearGradientBrush>
+        <SolidColorBrush x:Key="TabItemHotBackground" Color="Transparent"/>
+        <SolidColorBrush x:Key="TabItemSelectedBackground" Color="#F9F9F9"/>
+        <SolidColorBrush x:Key="TabItemSelectedBorderBrush" Color="#b6babf"/>
+        <SolidColorBrush x:Key="TabItemHotBorderBrush" Color="#b6babf"/>
+        <SolidColorBrush x:Key="TabItemDisabledBackground" Color="#F4F4F4"/>
+        <SolidColorBrush x:Key="TabItemDisabledBorderBrush" Color="Transparent"/>
+        <Style x:Key="TabItemStyle1" TargetType="{x:Type TabItem}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource TabItemFocusVisual}"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Padding" Value="10,1,10,1"/>
+            <Setter Property="BorderBrush" Value="{StaticResource TabControlNormalBorderBrush}"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TabItem}">
+                        <Grid SnapsToDevicePixels="true">
+                            <Border x:Name="Bd" CornerRadius="3,3,0,0" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1,1,1,0" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
+                                <ContentPresenter x:Name="Content" ContentSource="Header" HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="Bd" Value="{StaticResource TabItemHotBackground}"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="true">
+                                <Setter Property="Panel.ZIndex" Value="1"/>
+                                <Setter Property="Background" TargetName="Bd" Value="{StaticResource TabItemSelectedBackground}"/>
+                                <Setter Property="BorderBrush"  TargetName="Bd" Value="{StaticResource TabItemSelectedBorderBrush}"/>
+                            </Trigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsSelected" Value="false"/>
+                                    <Condition Property="IsMouseOver" Value="true"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource TabItemHotBorderBrush}"/>
+                            </MultiTrigger>
+                            <Trigger Property="TabStripPlacement" Value="Bottom">
+                                <Setter Property="BorderThickness" TargetName="Bd" Value="1,0,1,1"/>
+                            </Trigger>
+                            <Trigger Property="TabStripPlacement" Value="Left">
+                                <Setter Property="BorderThickness" TargetName="Bd" Value="1,1,0,1"/>
+                            </Trigger>
+                            <Trigger Property="TabStripPlacement" Value="Right">
+                                <Setter Property="BorderThickness" TargetName="Bd" Value="0,1,1,1"/>
+                            </Trigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsSelected" Value="true"/>
+                                    <Condition Property="TabStripPlacement" Value="Top"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Margin" Value="0,-2,0,-1"/>
+                                <Setter Property="Margin" TargetName="Content" Value="10,0,10,1"/>
+                            </MultiTrigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsSelected" Value="false"/>
+                                    <Condition Property="TabStripPlacement" Value="Top"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Margin" Value="0,-2,0,-1"/>
+                                <Setter Property="Margin" TargetName="Content" Value="10,0,10,1"/>
+                            </MultiTrigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsSelected" Value="true"/>
+                                    <Condition Property="TabStripPlacement" Value="Bottom"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Margin" Value="-2,-1,-2,-2"/>
+                                <Setter Property="Margin" TargetName="Content" Value="0,1,0,0"/>
+                            </MultiTrigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsSelected" Value="true"/>
+                                    <Condition Property="TabStripPlacement" Value="Left"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Margin" Value="-2,-2,-1,-2"/>
+                                <Setter Property="Margin" TargetName="Content" Value="0,0,1,0"/>
+                            </MultiTrigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsSelected" Value="true"/>
+                                    <Condition Property="TabStripPlacement" Value="Right"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Margin" Value="-1,-2,-2,-2"/>
+                                <Setter Property="Margin" TargetName="Content" Value="1,0,0,0"/>
+                            </MultiTrigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="Bd" Value="{StaticResource TabItemDisabledBackground}"/>
+                                <Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource TabItemDisabledBorderBrush}"/>
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="TabControlStyle1" TargetType="{x:Type TabControl}">
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#b6babf"/>
+            <!--<Setter Property="Background" Value="#e3e7ec"/>-->
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#e8f0f9" Offset="0.5"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TabControl}">
+                        <Grid ClipToBounds="true" SnapsToDevicePixels="true" KeyboardNavigation.TabNavigation="Local">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition x:Name="ColumnDefinition0"/>
+                                <ColumnDefinition x:Name="ColumnDefinition1" Width="0"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition x:Name="RowDefinition0" Height="Auto"/>
+                                <RowDefinition x:Name="RowDefinition1" Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Rectangle>
+                                <Rectangle.OpacityMask>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                        <GradientStop Color="#00000000" Offset="0"/>
+                                        <GradientStop Color="#FF000000" Offset="0.05"/>
+                                        <GradientStop Color="#FF000000" Offset="0.95"/>
+                                        <GradientStop Color="#00000000" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Rectangle.OpacityMask>
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <GradientStop Color="#00FFFFFF" Offset="0"/>
+                                        <GradientStop Color="#33FFFFFF" Offset="0.2"/>
+                                        <GradientStop Color="#FFFFFFFF" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <TabPanel x:Name="HeaderPanel" Grid.Column="0" IsItemsHost="true" Margin="5,2,2,0" Grid.Row="0" KeyboardNavigation.TabIndex="1" Panel.ZIndex="1"/>
+                            <Border x:Name="ContentPanel"  Margin="-1,0,-1,-1" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.Column="0" KeyboardNavigation.DirectionalNavigation="Contained" Grid.Row="1" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local">
+                                <ContentPresenter x:Name="PART_SelectedContentHost" ContentSource="SelectedContent" Margin="{TemplateBinding Padding}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="TabStripPlacement" Value="Bottom">
+                                <Setter Property="Grid.Row" TargetName="HeaderPanel" Value="1"/>
+                                <Setter Property="Grid.Row" TargetName="ContentPanel" Value="0"/>
+                                <Setter Property="Height" TargetName="RowDefinition0" Value="*"/>
+                                <Setter Property="Height" TargetName="RowDefinition1" Value="Auto"/>
+                                <Setter Property="Margin" TargetName="HeaderPanel" Value="2,0,2,2"/>
+                            </Trigger>
+                            <Trigger Property="TabStripPlacement" Value="Left">
+                                <Setter Property="Grid.Row" TargetName="HeaderPanel" Value="0"/>
+                                <Setter Property="Grid.Row" TargetName="ContentPanel" Value="0"/>
+                                <Setter Property="Grid.Column" TargetName="HeaderPanel" Value="0"/>
+                                <Setter Property="Grid.Column" TargetName="ContentPanel" Value="1"/>
+                                <Setter Property="Width" TargetName="ColumnDefinition0" Value="Auto"/>
+                                <Setter Property="Width" TargetName="ColumnDefinition1" Value="*"/>
+                                <Setter Property="Height" TargetName="RowDefinition0" Value="*"/>
+                                <Setter Property="Height" TargetName="RowDefinition1" Value="0"/>
+                                <Setter Property="Margin" TargetName="HeaderPanel" Value="2,2,0,2"/>
+                            </Trigger>
+                            <Trigger Property="TabStripPlacement" Value="Right">
+                                <Setter Property="Grid.Row" TargetName="HeaderPanel" Value="0"/>
+                                <Setter Property="Grid.Row" TargetName="ContentPanel" Value="0"/>
+                                <Setter Property="Grid.Column" TargetName="HeaderPanel" Value="1"/>
+                                <Setter Property="Grid.Column" TargetName="ContentPanel" Value="0"/>
+                                <Setter Property="Width" TargetName="ColumnDefinition0" Value="*"/>
+                                <Setter Property="Width" TargetName="ColumnDefinition1" Value="Auto"/>
+                                <Setter Property="Height" TargetName="RowDefinition0" Value="*"/>
+                                <Setter Property="Height" TargetName="RowDefinition1" Value="0"/>
+                                <Setter Property="Margin" TargetName="HeaderPanel" Value="0,2,2,2"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="Block" TargetType="{x:Type UserControl}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type UserControl}">
+                        <Grid>
+                            <Rectangle Margin="0,0,0,0">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <GradientStop Color="#FFFFFFFF" Offset="0"/>
+                                        <GradientStop Color="#FFFFFFFF" Offset="0.9"/>
+                                        <GradientStop Color="#e5e9ee" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <Rectangle Fill="#8b9097" VerticalAlignment="Bottom" Height="1" Margin="0,0,0,4"/>
+                            <Rectangle VerticalAlignment="Bottom" Height="4">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <GradientStop Color="#c6c9cd" Offset="0"/>
+                                        <GradientStop Color="#e3e7ec" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+        <DockPanel.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="Transparent" Offset="0"/>
+                <GradientStop Color="White" Offset="0.5"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </DockPanel.Background>
+        <Grid DockPanel.Dock="Bottom" Background="White"  Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="82"/>
+                <ColumnDefinition Width="82"/>
+                <ColumnDefinition Width="82"/>
+                <ColumnDefinition Width="7"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Name="ResetButton" Content="Reset" Width="75" Height="23" Margin="7,0,0,0" Click="ResetButton_Click" HorizontalAlignment="Left"/>
+            <Button Grid.Column="1" Name="OkButton" Content="OK" Width="75" Height="23" Click="OkButton_Click"/>
+            <Button Grid.Column="2" Name="CancelButton" Content="Cancel" Width="75" Height="23" Click="CancelButton_Click"/>
+            <Button Grid.Column="3" Name="ApplyButton" Content="Apply" Width="75" Height="23" IsEnabled="False" Click="ApplyButton_Click"/>
+        </Grid>
+        <TabControl Style="{StaticResource TabControlStyle1}">
+            <TabItem Name="GeneralTab" Header="General" Style="{StaticResource TabItemStyle1}">
+                <StackPanel>
+                    <Grid>
+                        <UserControl Style="{StaticResource Block}"/>
+                        <StackPanel Margin="10,10,10,20">
+                            <CheckBox Name="TaskbarIconCheckBox" Click="CheckBox_Click" Content="Show icon on taskbar"/>
+                            <CheckBox Name="WeatherCheckBox" Click="CheckBox_Click" Content="Show weather" Visibility="Collapsed"/>
+                            <CheckBox Name="WeatherAnimationCheckBox" Click="CheckBox_Click" Content="Enable weather animation"/>
+                            <CheckBox Name="ShowForecastCheckBox" Click="CheckBox_Click" Content="Show 5-day forecast"/>
+                            <CheckBox Name="EnableSoundsCheckBox" Click="CheckBox_Click" Content="Enable weather sounds"/>
+                            <CheckBox Name="ChangeBgCheckBox" Click="CheckBox_Click" Content="Change widget background with weather"/>
+                            <CheckBox Name="WallpaperChangingCheckBox" Click="CheckBox_Click" Content="Change desktop wallpaper with weather"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid>
+                        <UserControl Style="{StaticResource Block}"/>
+                        <StackPanel Margin="10,10,10,20">
+                            <TextBlock Name="ProviderTextBlock" Margin="0,3,0,3" Text="Weather provider:"/>
+                            <ComboBox Name="ProviderComboBox" SelectionChanged="ProviderComboBox_SelectionChanged"/>
+                            <TextBlock Name="IntervalTextBlock" Margin="0,3,0,3" VerticalAlignment="Center" Text="Interval:"/>
+                            <ComboBox Name="IntervalComboBox" SelectionChanged="ComboBox_SelectionChanged_1">
+                                <ComboBoxItem Content="5"/>
+                                <ComboBoxItem Content="10"/>
+                                <ComboBoxItem Content="15"/>
+                                <ComboBoxItem Content="20"/>
+                                <ComboBoxItem Content="30"/>
+                                <ComboBoxItem Content="40"/>
+                                <ComboBoxItem Content="50"/>
+                                <ComboBoxItem Content="60"/>
+                                <ComboBoxItem Content="80"/>
+                                <ComboBoxItem Content="100"/>
+                            </ComboBox>
+                            <!--<TextBox Name="IntervalTextBox" VerticalAlignment="Center" Margin="5,0,5,0" Width="30" TextChanged="IntervalTextBox_TextChanged"/>-->
+                            <StackPanel Orientation="Vertical" Margin="0,5,0,0">
+                                <TextBlock Name="ShowTempInTextBlock" VerticalAlignment="Center" Text="Show temperature in:"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <RadioButton Name="Fahrenheit" Content="Fahrenheit" Click="CheckBox_Click"/>
+                                    <RadioButton Name="Celsius" Content="Celsius" Margin="5,0,0,0" IsChecked="True" Click="CheckBox_Click"/>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" Margin="0,5,0,5">
+                                <TextBlock Name="TimeModeTextBlock" VerticalAlignment="Center" Text="Time format:"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <RadioButton Name="TimeMode1" Content="24 hours" Click="CheckBox_Click" IsChecked="True"/>
+                                    <RadioButton Name="TimeMode2" Content="12 hours" Margin="5,0,0,0" Click="CheckBox_Click"/>
+                                </StackPanel>
+                            </StackPanel>
+                            <TextBlock Name="WallpapersFolderTextBlock" VerticalAlignment="Center" Text="Wallpapers folder:" Visibility="Collapsed"/>
+                            <DockPanel Name="WallpapersFolderPanel" Visibility="Collapsed">
+                                <Button DockPanel.Dock="Right" Margin="5,0,0,0" Content="..." Width="30"/>
+                                <TextBox Name="WallpapersFolderTextBox" VerticalAlignment="Center" TextChanged="IntervalTextBox_TextChanged"/>
+                            </DockPanel>
+                        </StackPanel>
+                    </Grid>
+
+                    <StackPanel>
+                        <TextBlock Name="RestartTextBlock" Text="Some options requires restart" Margin="10,0,10,10" TextWrapping="Wrap" FontStyle="Italic" Foreground="Gray"/>
+                        <TextBlock Name="ProviderChangedTextBlock" Text="After changing weather provider you need to specify your location again." Margin="10,0,10,10" TextWrapping="Wrap" FontStyle="Italic" FontWeight="Bold" Foreground="Gray" Visibility="Visible"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Name="LocationTab" Header="Location" Style="{StaticResource TabItemStyle1}">
+                <Grid>
+                    <StackPanel>
+                        <Grid MaxHeight="360">
+                            <UserControl Style="{StaticResource Block}"/>
+                            <DockPanel>
+                                <StackPanel DockPanel.Dock="Top">
+                                    <TextBlock Name="CurrentLocationTextBlock" Margin="12,12,12,0" VerticalAlignment="Top" Text="Current location:"/>
+                                    <TextBlock Name="LocationText" Margin="12,0,12,0" VerticalAlignment="Top" Text="New York"/>
+                                    <TextBlock Name="EnterLocationTextBlock" Margin="12,10,12,0" VerticalAlignment="Top" TextWrapping="Wrap" Text="Type the name of your city:"/>
+                                    <Grid Height="22" Margin="12,4,12,12">
+                                        <TextBox Name="LocationBox" KeyDown="LocationBox_KeyDown"/>
+                                        <Button Width="28" HorizontalAlignment="Right" Click="Button_Click">
+                                            <Image Source="/WeatherClock;component/Resources/SearchIcon.png" />
+                                        </Button>
+                                    </Grid>
+                                </StackPanel>
+                                <Grid Margin="12,0,12,12">
+                                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                        <StackPanel Name="SearchResults">
+
+                                        </StackPanel>
+                                    </ScrollViewer>
+                                    <ProgressBar Name="SearchProgress" IsIndeterminate="True" Height="15" Margin="25,0,25,0" Visibility="Hidden">
+                                        <ProgressBar.OpacityMask>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                                <GradientStop Color="#00000000" Offset="0"/>
+                                                <GradientStop Color="#FF000000" Offset="0.3"/>
+                                                <GradientStop Color="#FF000000" Offset="0.6"/>
+                                                <GradientStop Color="#00000000" Offset="1"/>
+                                            </LinearGradientBrush>
+                                        </ProgressBar.OpacityMask>
+                                    </ProgressBar>
+                                </Grid>
+                            </DockPanel>
+                        </Grid>
+                        <Grid Visibility="Collapsed" >
+                            <UserControl Style="{StaticResource Block}"/>
+                            <StackPanel Margin="10,10,10,20">
+                                <CheckBox IsEnabled="False" Margin="0,0,0,0" Name="DetectLocationCheckBox" Click="CheckBox_Click" Content="Automatically detect location"/>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Name="SkinTab" Header="Skin" Style="{StaticResource TabItemStyle1}">
+                <StackPanel>
+                    <Grid>
+                        <Image Name="SkinPreview" Height="200" Stretch="Uniform" Margin="0,0,0,5"/>
+                        <!--<UserControl Style="{StaticResource Block}"/>-->
+                        <Rectangle Fill="#8b9097" VerticalAlignment="Bottom" Height="1" Margin="0,0,0,4"/>
+                        <Rectangle VerticalAlignment="Bottom" Height="4">
+                            <Rectangle.Fill>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                    <GradientStop Color="#c6c9cd" Offset="0"/>
+                                    <GradientStop Color="#e3e7ec" Offset="1.0"/>
+                                </LinearGradientBrush>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Grid>
+                    <Grid>
+                        <UserControl Style="{StaticResource Block}"/>
+                        <StackPanel Margin="10,10,10,20">
+                            <ComboBox Name="SkinsComboBox" SelectionChanged="SkinsComboBox_SelectionChanged"/>
+                            <TextBlock Name="DescriptionTextBlock" Text="Description:" HorizontalAlignment="Left" Margin="0,5,0,0" TextWrapping="Wrap"/>
+                            <TextBlock Name="AuthorTextBlock" Text="Author:" HorizontalAlignment="Left" Margin="0,5,0,0"/>
+                            <TextBlock Name="VersionTextBlock" Text="Version:" HorizontalAlignment="Left" Margin="0,5,0,0"/>
+                            <TextBlock Name="ContactsTextBlock" Text="Contacts:" HorizontalAlignment="Left" Margin="0,5,0,0"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Name="AboutTab" Header="About" Style="{StaticResource TabItemStyle1}">
+                <StackPanel>
+                    <Grid>
+                        <UserControl Style="{StaticResource Block}"/>
+                        <DockPanel Name="AboutDockPanel" Opacity="1" Background="Transparent">
+                            <Grid Name="CaptionGrid" DockPanel.Dock="Top" Height="70" Margin="0,0,0,0">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <Image Name="Image1" HorizontalAlignment="Right" Width="60" Height="60" Source="Resources/Weather/sun.png" />
+                                    <Grid VerticalAlignment="Center">
+                                        <TextBlock Name="Caption" FontSize="22" Foreground="#5f707c" TextAlignment="Center" Opacity="1">
+                                          Weather/Clock
+                                        </TextBlock>
+                                    </Grid>
+                                </StackPanel>
+                                <Label Content="© 2011 Stealth" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="10" Foreground="Gray" Margin="0,0,0,5"/>
+                            </Grid>
+                            <Grid DockPanel.Dock="Bottom" Margin="0,0,0,50">
+                                <Line Name="SplitterLine" X1="0" Y1="3" X2="200" Y2="3" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                                    <Line.Stroke>
+                                        <LinearGradientBrush EndPoint="0,0" StartPoint="1,0">
+                                            <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                            <GradientStop Color="#FFF0F0F0" Offset="1"/>
+                                            <GradientStop Color="#FF6A6A6A" Offset="0.513"/>
+                                        </LinearGradientBrush>
+                                    </Line.Stroke>
+                                </Line>
+                                <TextBlock Name="ContactString" Margin="0,0,50,0"  HorizontalAlignment="Right" FontSize="11" Foreground="CornflowerBlue" Cursor="Hand" Text="www.htchome.org" MouseLeftButtonDown="ContactString_MouseLeftButtonDown"/>
+                            </Grid>
+                            <Grid Background="Transparent">
+                                <StackPanel Margin="30,15,30,15">
+                                    <TextBlock Text="Weather/Clock widget" FontSize="11" TextWrapping="Wrap"/>
+                                    <TextBlock Name="VersionString" FontSize="11" TextWrapping="Wrap" Text="Version 2.0 Build 200"/>
+                                    <TextBlock Name="CopyrightString1" Text="© Stealth 2011. All rights reserved." FontSize="11" TextWrapping="Wrap"/>
+                                    <TextBlock Name="CopyrightString2" FontSize="11" TextWrapping="Wrap"/>
+                                </StackPanel>
+                            </Grid>
+                        </DockPanel>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Window>

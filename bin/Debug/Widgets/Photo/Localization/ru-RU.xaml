@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+    <s:String x:Key="LocaleCode">ru-RU</s:String>
+    <s:String x:Key="LocaleName">Русский</s:String>
+    <s:String x:Key="LocaleAuthor">Stealth</s:String>
+    <!-- Menu strings -->
+    <s:String x:Key="Options">Настройки виджета</s:String>
+    <s:String x:Key="Next">Следующее изображение</s:String>
+    <!-- Options strings -->
+    <s:String x:Key="General">Общие</s:String>
+    <s:String x:Key="AboutWidget">О виджете</s:String>
+    <s:String x:Key="SwitchAutomatically">Пролистывать изображения автоматически</s:String>
+    <s:String x:Key="Interval">Интервал (в минутах):</s:String>
+    <s:String x:Key="PicsDirectory">Папка с изображениями:</s:String>
+    <s:String x:Key="Choose">Обзор...</s:String>
+    <s:String x:Key="UIMode">Режим отображения:</s:String>
+    <s:String x:Key="Landscape">Ландшафтный</s:String>
+    <s:String x:Key="Portrait">Портретный</s:String>
+    <s:String x:Key="RestartText">Некоторые настройки вступят в силу после перезапуска программы</s:String>
+    <s:String x:Key="OK">ОК</s:String>
+    <s:String x:Key="Cancel">Отмена</s:String>
+    <s:String x:Key="Apply">Применить</s:String>
+</ResourceDictionary>

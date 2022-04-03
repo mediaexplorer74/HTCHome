@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="WeatherClockWidget.Wizard.Page3"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <ResourceDictionary Source="./Block.xaml"/>
+    </UserControl.Resources>
+    <Grid>
+        <UserControl Style="{StaticResource Block}" Margin="0,0,0,40"/>
+        <StackPanel Margin="0,0,0,40">
+            <TextBlock Name="Title" Text="Misc" HorizontalAlignment="Center" Margin="0,15,0,0" FontSize="22" Foreground="Gray"/>
+            <TextBlock Name="String1" Text="Would you like to see the current temperature in taskbar?"  Margin="10,10,0,0" FontSize="14" TextWrapping="Wrap"/>
+            <Image Source="../Resources/taskbar_preview.png" Width="180" HorizontalAlignment="Left" Margin="10,5,0,0"/>
+            <CheckBox Name="TaskbarIconCheckBox" Click="CheckBox_Click" Content="Show icon on taskbar (only for Windows 7)" Margin="10,5,0,0"/>
+        </StackPanel>
+        <Button Name="NextButton" Content="Next" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,10" Width="75" Height="23" Click="NextButton_Click"/>
+    </Grid>
+</UserControl>

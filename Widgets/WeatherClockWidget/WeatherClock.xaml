@@ -1,0 +1,95 @@
+﻿<UserControl x:Class="WeatherClockWidget.WeatherClock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:this="clr-namespace:WeatherClockWidget"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+             d:DesignHeight="280" d:DesignWidth="500"
+             Style="{DynamicResource WidgetStyle}"
+             MouseLeftButtonDown="UserControl_MouseLeftButtonDown">
+    <UserControl.Resources>
+        <ResourceDictionary x:Name="Skin"/>
+    </UserControl.Resources>
+    <Grid RenderTransformOrigin="0,0">
+        <Grid.RenderTransform>
+            <ScaleTransform x:Name="Scale" ScaleX="1" ScaleY="{Binding ElementName=Scale, Path=ScaleX}"/>
+        </Grid.RenderTransform>
+        <Grid Style="{DynamicResource BasePanelStyle}">
+            <Image Name="Bg"  Source="Skins\Sense\bg.png" Style="{DynamicResource BaseStyle}"/>
+            <Rectangle Name="LightningBg1" Style="{DynamicResource LightningBg1Style}"/>
+            <Rectangle Name="LightningBg2" Style="{DynamicResource LightningBg2Style}"/>
+            <Rectangle Name="FrostBg" Style="{DynamicResource FrostBgStyle}">
+                <Rectangle.Resources>
+                    <Storyboard x:Key="FadeIn" BeginTime="0:0:3">
+                        <DoubleAnimation Storyboard.TargetName="FrostBg" Storyboard.TargetProperty="Opacity" Duration="0:0:1.5" From="0" To="0.4"/>
+                        <DoubleAnimation Storyboard.TargetName="ForecastFrostBg" Storyboard.TargetProperty="Opacity" Duration="0:0:1.5" From="0" To="0.4"/>
+                        <DoubleAnimation Storyboard.TargetName="FrostLeft" Storyboard.TargetProperty="Opacity" Duration="0:0:2" From="0" To="1" Completed="FrostFadeInAnimation_Completed"/>
+                        <DoubleAnimation Storyboard.TargetName="FrostRight" Storyboard.TargetProperty="Opacity" Duration="0:0:2" From="0" To="1"/>
+                    </Storyboard>
+                    <Storyboard x:Key="FadeOut" BeginTime="0:0:12">
+                        <DoubleAnimation Storyboard.TargetName="FrostBg" Storyboard.TargetProperty="Opacity" Duration="0:0:0.7" To="0"/>
+                        <DoubleAnimation Storyboard.TargetName="ForecastFrostBg" Storyboard.TargetProperty="Opacity" Duration="0:0:0.7" To="0"/>
+                        <DoubleAnimation Storyboard.TargetName="FrostLeft" Storyboard.TargetProperty="Opacity" Duration="0:0:0.7" To="0"/>
+                        <DoubleAnimation Storyboard.TargetName="FrostRight" Storyboard.TargetProperty="Opacity" Duration="0:0:0.7" To="0"/>
+                    </Storyboard>
+                </Rectangle.Resources>
+            </Rectangle>
+            <Image Name="FrostLeft" Source="Skins\Sense\Weather\frost_left.png" Style="{DynamicResource FrostLeftStyle}"/>
+            <Image Name="FrostRight" Source="Skins\Sense\Weather\frost_right.png" Style="{DynamicResource FrostRightStyle}"/>
+            <StackPanel Name="ClockPanel" Style="{DynamicResource ClockPanelStyle}">
+                <this:FlipClockControl x:Name="Hours" Style="{DynamicResource HoursTabStyle}" />
+                <this:FlipClockControl x:Name="Minutes" ShowAmPm="False" Style="{DynamicResource MinutesTabStyle}" />
+            </StackPanel>
+            <Grid Name="WeatherPanel" Style="{DynamicResource WeatherPanelStyle}">
+                <Grid Style="{DynamicResource CityGridStyle}">
+                    <TextBlock Name="CityShadow" Text="{Binding ElementName=City, Path=Text}" Style="{DynamicResource CityTextShadowStyle}"/>
+                    <TextBlock Name="City" Text="New York" Style="{DynamicResource CityTextStyle}"/>
+                </Grid>
+                <Grid Style="{DynamicResource WeatherGridStyle}">
+                    <TextBlock Name="WeatherShadow" Text="{Binding ElementName=Weather, Path=Text}" Style="{DynamicResource WeatherTextShadowStyle}"/>
+                    <TextBlock Name="Weather" Text="Clear" Style="{DynamicResource WeatherTextStyle}"/>
+                </Grid>
+                <Grid Name="WeatherIconGrid" Style="{DynamicResource WeatherIconGridStyle}" MouseLeftButtonDown="icon_MouseLeftButtonDown">
+                    <Grid.Resources>
+                        <Storyboard x:Key="Flip">
+                            <DoubleAnimation Storyboard.TargetName="WeatherIconBgScale" Storyboard.TargetProperty="ScaleX" From="1" To="0.5" Duration="0:0:0.3"/>
+                            <DoubleAnimation Storyboard.TargetName="WeatherIconScale" Storyboard.TargetProperty="ScaleX" From="1.5" To="1" Duration="0:0:0.3"/>
+                            <DoubleAnimation Storyboard.TargetName="WeatherIconBg" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.3"/>
+                            <DoubleAnimation Storyboard.TargetName="WeatherIcon" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.3"/>
+                        </Storyboard>
+                    </Grid.Resources>
+                    <Image Name="WeatherIconBg" Opacity="0" RenderTransformOrigin="0.5,0.5">
+                        <Image.RenderTransform>
+                            <ScaleTransform x:Name="WeatherIconBgScale" ScaleX="1" ScaleY="{Binding ElementName=WeatherIconBgScale, Path=ScaleX}"/>
+                        </Image.RenderTransform>
+                    </Image>
+                    <Image Name="WeatherIcon" RenderTransformOrigin="0.5,0.5">
+                        <Image.RenderTransform>
+                            <ScaleTransform x:Name="WeatherIconScale" ScaleY="{Binding ElementName=WeatherIconScale, Path=ScaleX}"/>
+                        </Image.RenderTransform>
+                    </Image>
+                </Grid>
+                <Grid Style="{DynamicResource DateGridStyle}">
+                    <TextBlock Name="DateShadow" Text="{Binding ElementName=Date, Path=Text}" Style="{DynamicResource DateTextShadowStyle}"/>
+                    <TextBlock Name="Date" Text="Thu, Sep 23" Style="{DynamicResource DateTextStyle}"/>
+                </Grid>
+                <Grid Style="{DynamicResource TemperatureGridStyle}">
+                    <TextBlock Name="TemperatureShadow" Text="{Binding ElementName=Temperature, Path=Text}" Style="{DynamicResource TemperatureTextShadowStyle}"/>
+                    <TextBlock Name="Temperature" Text="0°" Style="{DynamicResource TemperatureTextStyle}"/>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Name="ForecastGrid" Style="{DynamicResource ForecastGridStyle}">
+            <Image Name="ForecastBg" Style="{DynamicResource ForecastBaseStyle}"/>
+            <Rectangle Name="ForecastFrostBg" Style="{DynamicResource ForecastFrostBgStyle}"/>
+            <StackPanel Name="ForecastPanel" Style="{DynamicResource ForecastPanelStyle}">
+                <this:ForecastItem x:Name="FItem1" Style="{DynamicResource ForecastDay1Style}" Order="1"/>
+                <this:ForecastItem x:Name="FItem2" Style="{DynamicResource ForecastDay2Style}" Order="3"/>
+                <this:ForecastItem x:Name="FItem3" Style="{DynamicResource ForecastDay3Style}" Order="0"/>
+                <this:ForecastItem x:Name="FItem4" Style="{DynamicResource ForecastDay4Style}" Order="4"/>
+                <this:ForecastItem x:Name="FItem5" Style="{DynamicResource ForecastDay5Style}" Order="2"/>
+            </StackPanel>
+        </Grid>
+        <Image Name="Overlay" Style="{DynamicResource OverlayStyle}"/>
+        <Canvas Name="WeatherAnimationCanvas" Style="{DynamicResource WeatherAnimationCanvasStyle}"/>
+    </Grid>
+</UserControl>

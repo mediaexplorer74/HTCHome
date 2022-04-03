@@ -1,0 +1,8 @@
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Music\AIMP\AIMP.cs
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Music\AIMP\AIMP.dll
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Music\AIMP\AIMP.pdb
+C:\Users\media\source\repos\HTCHome\Extensions\Music\AIMP\obj\Debug\AIMP.csproj.AssemblyReference.cache
+C:\Users\media\source\repos\HTCHome\Extensions\Music\AIMP\obj\Debug\AIMP.csproj.CoreCompileInputs.cache
+C:\Users\media\source\repos\HTCHome\Extensions\Music\AIMP\obj\Debug\AIMP.csproj.CopyComplete
+C:\Users\media\source\repos\HTCHome\Extensions\Music\AIMP\obj\Debug\AIMP.dll
+C:\Users\media\source\repos\HTCHome\Extensions\Music\AIMP\obj\Debug\AIMP.pdb

@@ -1,0 +1,180 @@
+﻿<UserControl x:Class="NewsWidget.News"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:this="clr-namespace:NewsWidget"
+             Height="410" Width="320">
+    <UserControl.Resources>
+        <Style x:Key="{x:Type RepeatButton}" TargetType="{x:Type RepeatButton}" BasedOn="{x:Null}">
+        <Setter Property="Background" Value="{DynamicResource NormalBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Grid>
+                        <Border x:Name="Border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"/>
+                        <ContentPresenter HorizontalAlignment="Center" x:Name="ContentPresenter" VerticalAlignment="Center" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsKeyboardFocused" Value="true">
+                            <Setter Property="BorderBrush" Value="{DynamicResource DefaultedBorderBrush}" TargetName="Border"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="{DynamicResource MouseOverBrush}" TargetName="Border"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" Value="{DynamicResource PressedBrush}" TargetName="Border"/>
+                            <Setter Property="BorderBrush" Value="{DynamicResource PressedBorderBrush}" TargetName="Border"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" Value="{DynamicResource DisabledBackgroundBrush}" TargetName="Border"/>
+                            <Setter Property="BorderBrush" Value="{DynamicResource DisabledBorderBrush}" TargetName="Border"/>
+                            <Setter Property="Foreground" Value="{DynamicResource DisabledForegroundBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        </Style>
+        <Style x:Key="{x:Type ScrollBar}" TargetType="{x:Type ScrollBar}">
+            <Setter Property="Stylus.IsFlicksEnabled" Value="false"/>
+            <!--<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>-->
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="HorizontalAlignment"  Value="Right"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ScrollBar}">
+                        <Grid x:Name="GridRoot" Width="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0"/>
+                                <RowDefinition Height="0.00001*"/>
+                                <RowDefinition Height="0"/>
+                            </Grid.RowDefinitions>
+
+                            <RepeatButton x:Name="DecreaseRepeat" Background="Transparent" Command="ScrollBar.LineUpCommand" Visibility="Collapsed">
+                                <Grid>
+                                    <Path x:Name="DecreaseArrow" Stroke="{TemplateBinding Foreground}" StrokeThickness="1" Data="M 0 4 L 8 4 L 4 0 Z"/>
+                                </Grid>
+                            </RepeatButton>
+
+                            <!-- Track is a special layout container which sizes the thumb and the repeat button which do jump scrolling either side of it -->
+                            <Track Grid.Row="1" x:Name="PART_Track" Orientation="Vertical" IsDirectionReversed="true">
+                                <Track.Thumb>
+                                    <Thumb>
+                                        <Thumb.Template>
+                                            <ControlTemplate TargetType="{x:Type Thumb}">
+                                                <Grid Margin="0,0,0,0" x:Name="Grid">
+                                                    <Rectangle HorizontalAlignment="Stretch" x:Name="Rectangle" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RadiusX="2" RadiusY="2" Fill="Gray" Stroke="#FF727272"/>
+                                                </Grid>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsFocused" Value="True"/>
+                                                    <Trigger Property="IsMouseOver" Value="True"/>
+                                                    <Trigger Property="IsEnabled" Value="False"/>
+                                                    <Trigger Property="IsDragging" Value="True"/>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Thumb.Template>
+                                    </Thumb>
+                                </Track.Thumb>
+                                <Track.IncreaseRepeatButton>
+                                    <RepeatButton x:Name="PageUp" Style="{DynamicResource SimpleScrollRepeatButtonStyle}" Command="ScrollBar.PageDownCommand"/>
+                                </Track.IncreaseRepeatButton>
+                                <Track.DecreaseRepeatButton>
+                                    <RepeatButton x:Name="PageDown" Style="{DynamicResource SimpleScrollRepeatButtonStyle}" Command="ScrollBar.PageUpCommand"/>
+                                </Track.DecreaseRepeatButton>
+                            </Track>
+
+                            <RepeatButton Grid.Row="2" x:Name="IncreaseRepeat" Style="{DynamicResource SimpleRepeatButton}" Command="ScrollBar.LineDownCommand" Visibility="Collapsed">
+                                <Grid>
+                                    <Path x:Name="IncreaseArrow" Stroke="{TemplateBinding Foreground}" StrokeThickness="1" Data="M 0 0 L 4 4 L 8 0 Z"/>
+                                </Grid>
+                            </RepeatButton>
+                        </Grid>
+
+                        <!-- This uses a single template for ScrollBar and rotate it to be Horizontal
+					It also changes the commands so that the it does Left and Right instead of Up and Down Commands -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Orientation" Value="Horizontal">
+
+                                <!-- Rotate the ScrollBar from Vertical to Horizontal -->
+                                <Setter Property="LayoutTransform" TargetName="GridRoot">
+                                    <Setter.Value>
+                                        <RotateTransform Angle="-90"/>
+                                    </Setter.Value>
+                                </Setter>
+
+                                <!-- Track is bound to Orientation internally, so we need to rotate it back to Vertical -->
+                                <Setter TargetName="PART_Track" Property="Orientation" Value="Vertical"/>
+
+                                <!-- Change the commands to do Horizontal commands -->
+                                <Setter Property="Command" Value="ScrollBar.LineLeftCommand" TargetName="DecreaseRepeat"/>
+                                <Setter Property="Command" Value="ScrollBar.LineRightCommand" TargetName="IncreaseRepeat"/>
+                                <Setter Property="Command" Value="ScrollBar.PageLeftCommand" TargetName="PageDown"/>
+                                <Setter Property="Command" Value="ScrollBar.PageRightCommand" TargetName="PageUp"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="{x:Type this:DragScrollViewer}" TargetType="{x:Type ScrollViewer}" BasedOn="{x:Null}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                        <Grid Background="{TemplateBinding Background}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <ScrollContentPresenter Grid.Column="0" Grid.Row="0" Margin="{TemplateBinding Padding}" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" CanContentScroll="{TemplateBinding CanContentScroll}"/>
+
+                            <!-- The visibility of the ScrollBars is controlled by the implementation fo the control -->
+                            <ScrollBar Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}" Grid.Column="0" Grid.Row="1" x:Name="PART_HorizontalScrollBar" Style="{DynamicResource SimpleScrollBar}" Orientation="Horizontal" Value="{Binding HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" ViewportSize="{TemplateBinding ViewportWidth}" Minimum="0" Maximum="{TemplateBinding ScrollableWidth}" />
+                            <ScrollBar HorizontalAlignment="Right" Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}" Grid.Column="1" Grid.Row="0" x:Name="PART_VerticalScrollBar" Style="{DynamicResource SimpleScrollBar}" Orientation="Vertical" Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" ViewportSize="{TemplateBinding ViewportHeight}" Minimum="0" Maximum="{TemplateBinding ScrollableHeight}" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid Margin="0,15,0,0">
+        <Grid.RenderTransform>
+            <ScaleTransform x:Name="Scale" ScaleX="1" ScaleY="{Binding ElementName=Scale, Path=ScaleX}"/>
+        </Grid.RenderTransform>
+        <Image Name="Body" Source="Resources\body.png" Stretch="Fill" Margin="0,25,0,8"/>
+        <Image Name="Header" Source="Resources\header.png" VerticalAlignment="Top" Height="68" Stretch="Uniform" />
+        <Image Name="Footer" Source="Resources\footer.png" VerticalAlignment="Bottom" Height="22"/>
+        <Image Name="NewsPaperIcon" Source="Resources\newspaper.png" VerticalAlignment="Top" HorizontalAlignment="Right" Width="102" Height="67" Margin="0,-15,10,0" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,2" MouseLeftButtonDown="StackPanelMouseLeftButtonDown">
+            <Image Name="RefreshIcon" Source="Resources\refresh.png" Height="14" RenderTransformOrigin="0.5,0.5" RenderOptions.BitmapScalingMode="HighQuality">
+                <Image.Resources>
+                    <Storyboard x:Key="RefreshAnim">
+                        <DoubleAnimation Storyboard.TargetName="RefreshRotation" Storyboard.TargetProperty="Angle" From="0" To="360" Duration="0:0:1" RepeatBehavior="Forever" />
+                    </Storyboard>
+                </Image.Resources>
+                <Image.RenderTransform>
+                    <RotateTransform x:Name="RefreshRotation" />
+                </Image.RenderTransform>
+            </Image>
+            <Grid Margin="3,0,0,0">
+                <TextBlock Name="RefreshTimeShadow" Text="{Binding ElementName=RefreshTime,Path=Text}" FontSize="14" VerticalAlignment="Center" Foreground="Black" Margin="0.5,0.5,0,0"/>
+                <TextBlock Name="RefreshTime" Text="12:02" FontSize="14" VerticalAlignment="Center">
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                            <GradientStop Color="#a6a6a6" Offset="0"/>
+                            <GradientStop Color="#e1e1e0" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBlock.Foreground>
+                </TextBlock>
+            </Grid>
+        </StackPanel>
+        <this:DragScrollViewer x:Name="ScrollViewer" Margin="0,48,0,22" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Hidden">
+            <StackPanel Name="NewsPanel" Width="320">
+                <StackPanel.RenderTransform>
+                    <TranslateTransform x:Name="TranslateNews" />
+                </StackPanel.RenderTransform>
+            </StackPanel>
+        </this:DragScrollViewer>
+        <TextBlock Name="NewsTextShadow" VerticalAlignment="Top" HorizontalAlignment="Left" Text="{Binding ElementName=NewsText, Path=Text}" Foreground="Black" FontSize="20" Margin="11,9,0,0"/>
+        <TextBlock Name="NewsText" VerticalAlignment="Top" HorizontalAlignment="Left" Text="News" Foreground="White" FontSize="20" Margin="10,8,0,0"/>
+    </Grid>
+</UserControl>

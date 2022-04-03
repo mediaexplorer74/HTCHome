@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="WeatherClockWidget.WeatherAnimation.Raindrop"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Name="this" Opacity="0"
+             Loaded="this_Loaded">
+    <UserControl.Resources>
+        <Storyboard x:Key="MoveAnim">
+            <DoubleAnimation Storyboard.TargetName="this" Storyboard.TargetProperty="(Canvas.Top)" From="50" To="300" CurrentStateInvalidated="DoubleAnimation_CurrentStateInvalidated" Completed="DoubleAnimation_Completed"/>
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.RenderTransform>
+        <ScaleTransform ScaleX="0.2" ScaleY="0.6"/>
+    </UserControl.RenderTransform>
+    <Grid>
+        <Image Name="Image" Stretch="Uniform"/>
+    </Grid>
+</UserControl>

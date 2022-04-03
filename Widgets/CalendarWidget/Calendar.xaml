@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="CalendarWidget.Calendar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:this="clr-namespace:CalendarWidget"
+             Width="350" Height="430"
+             Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <Storyboard x:Key="Swap1">
+            <DoubleAnimation Storyboard.TargetName="CalendarTranslate" Storyboard.TargetProperty="X" From="0" To="-300" Duration="0:0:0.3"/>
+            <DoubleAnimation Storyboard.TargetName="CalendarControlGrid" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.3"/>
+            <DoubleAnimation Storyboard.TargetName="AgendaTranslate" Storyboard.TargetProperty="X" From="300" To="0" Duration="0:0:0.3"/>
+            <DoubleAnimation Storyboard.TargetName="AgendaGrid" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.3"/>
+        </Storyboard>
+        <Storyboard x:Key="Swap2" Completed="Storyboard_Completed">
+            <DoubleAnimation Storyboard.TargetName="CalendarTranslate" Storyboard.TargetProperty="X" From="-300" To="0" Duration="0:0:0.3"/>
+            <DoubleAnimation Storyboard.TargetName="CalendarControlGrid" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.3"/>
+            <DoubleAnimation Storyboard.TargetName="AgendaTranslate" Storyboard.TargetProperty="X" From="0" To="300" Duration="0:0:0.3"/>
+            <DoubleAnimation Storyboard.TargetName="AgendaGrid" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.3"/>
+        </Storyboard>
+    </UserControl.Resources>
+    <Grid Margin="0,15,0,0">
+        <Grid.RenderTransform>
+            <ScaleTransform x:Name="Scale" ScaleX="1" ScaleY="{Binding ElementName=Scale, Path=ScaleX}"/>
+        </Grid.RenderTransform>
+        <Image Name="Body" Source="Resources\body.png" Stretch="Fill" Margin="0,25,0,8"/>
+        <Image Name="Header" Source="Resources\header.png" VerticalAlignment="Top" Stretch="Uniform" />
+        <TextBlock Name="HeaderTextBlock" Foreground="White" Text="October 2010" VerticalAlignment="Top" FontSize="18" Margin="10,12,0,0"/>
+        <Image Name="SubHeader" Source="Resources\subheader.png"  Stretch="Uniform" VerticalAlignment="Top"  Margin="0,46,0,0"/>
+        <Grid Name="AgendaGrid" Opacity="0">
+            <Grid.RenderTransform>
+                <TranslateTransform x:Name="AgendaTranslate"/>
+            </Grid.RenderTransform>
+            <this:AgendaView x:Name="AgendaView" Margin="0,65,0,15"/>
+        </Grid>
+        <Grid Name="CalendarControlGrid">
+            <Grid.RenderTransform>
+                <TranslateTransform x:Name="CalendarTranslate"/>
+            </Grid.RenderTransform>
+            <this:CalendarControl x:Name="CalendarControl" HorizontalAlignment="Center" Margin="-5,38,0,0" CalendarDayChanged="CalendarControl_CalendarDayChanged"/>
+        </Grid>
+        <Image Name="Footer" Source="Resources\footer.png" VerticalAlignment="Bottom" Height="16" Stretch="Fill"/>
+        <Grid Name="CalendarGrid"  VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,-15,10,0">
+            <Image Name="CalendarIcon" Source="Resources\calendar_icon.png" Width="90"/>
+            <TextBlock Name="CalendarIconDay" Text="22" FontSize="25" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-12,-3,0,0">
+                <TextBlock.RenderTransform>
+                    <RotateTransform Angle="20"/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock Name="CalendarIconMonth" Text="Jan" FontSize="12" RenderTransformOrigin="0.5,0.5" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,9,0,0">
+                <TextBlock.RenderTransform>
+                    <RotateTransform Angle="20"/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+        </Grid>
+    </Grid>
+</UserControl>

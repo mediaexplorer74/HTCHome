@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="MediaPlayerWidget.MediaPlayer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Loaded="UserControl_Loaded" Style="{DynamicResource WidgetStyle}" MouseWheel="UserControl_MouseWheel" DragEnter="UserControl_DragEnter" Drop="UserControl_Drop">
+    <UserControl.Resources>
+        <ResourceDictionary x:Name="Skin"/>
+    </UserControl.Resources>
+    <Grid Name="Root" Style="{DynamicResource BasePanelStyle}">
+        <Grid.Resources>
+            <Storyboard x:Key="VolumeFadeIn">
+                <DoubleAnimation Storyboard.TargetName="VolumeBox" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.5" Completed="VolumeFadeIn_Completed"/>
+            </Storyboard>
+            <Storyboard x:Key="VolumeFadeOut" BeginTime="0:0:1.5">
+                <DoubleAnimation Storyboard.TargetName="VolumeBox" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.5"/>
+            </Storyboard>
+        </Grid.Resources>
+        <Grid.RenderTransform>
+            <ScaleTransform x:Name="Scale" ScaleX="1" ScaleY="{Binding ElementName=Scale, Path=ScaleX}"/>
+        </Grid.RenderTransform>
+        <!--<Image Name="Body" Source="Resources\body.png" Stretch="Fill"/>-->
+        <UserControl Style="{DynamicResource BackgroundStyle}"/>
+        <!--<Rectangle Height="0.5" Fill="#6c6c6c" VerticalAlignment="Bottom" Margin="0,0,0,90"/>-->
+        <!--<Image Name="AlbumArtShadow" Source="Resources\music_album_shadow.png" Width="203" Height="25" VerticalAlignment="Top" Margin="75,140,0,0"/>-->
+        <!--<Border Width="200" Height="190" VerticalAlignment="Top" Margin="0,151,0,0">
+            <Border.RenderTransform>
+                <ScaleTransform ScaleY="-1" CenterY="98"/>
+            </Border.RenderTransform>
+            <Border.OpacityMask>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                    <GradientStop Offset="0" Color="#77FFFFFF"/>
+                    <GradientStop Offset="0.5" Color="Transparent"/>
+                </LinearGradientBrush>
+            </Border.OpacityMask>
+            <Border.Background>
+                <VisualBrush Visual="{Binding ElementName=AlbumArtGrid}"/>
+            </Border.Background>
+        </Border>-->
+        <Grid Name="AlbumArtGrid" Style="{DynamicResource AlbumArtGridStyle}">
+            <Image Name="AlbumArtCover" Style="{DynamicResource AlbumArtCoverStyle}"/>
+            <Image Name="AlbumArt" Style="{DynamicResource AlbumArtStyle}"/>
+        </Grid>
+
+        <Grid Style="{DynamicResource SongTitleGridStyle}">
+            <TextBlock Name="SongTitleShadow" Text="{Binding ElementName=SongTitle, Path=Text}" Style="{DynamicResource SongTitleShadowStyle}"/>
+            <TextBlock Name="SongTitle" Text="No media" Style="{DynamicResource SongTitleStyle}"/>
+        </Grid>
+
+        <Grid Style="{DynamicResource SongAlbumGridStyle}">
+            <TextBlock Name="SongAlbumShadow" Text="{Binding ElementName=SongAlbum, Path=Text}" Style="{DynamicResource SongAlbumShadowStyle}"/>
+            <TextBlock Name="SongAlbum" Text="No media" Style="{DynamicResource SongAlbumStyle}"/>
+        </Grid>
+        <Grid Style="{DynamicResource SongTimeGridStyle}">
+            <TextBlock Name="SongTimeShadow" Text="{Binding ElementName=SongTime, Path=Text}" Style="{DynamicResource SongTimeShadowStyle}"/>
+            <TextBlock Name="SongTime" Text="0:00" Style="{DynamicResource SongTimeStyle}"/>
+        </Grid>
+        <Grid Style="{DynamicResource SongTimeLeftGridStyle}">
+            <TextBlock Name="SongTimeLeftShadow" Text="{Binding ElementName=SongTimeLeft, Path=Text}" Style="{DynamicResource SongTimeLeftShadowStyle}"/>
+            <TextBlock Name="SongTimeLeft" Text="0:00" Style="{DynamicResource SongTimeLeftStyle}"/>
+        </Grid>
+        <Grid Style="{DynamicResource SongArtistGridStyle}">
+            <TextBlock Name="SongArtistShadow" Text="{Binding ElementName=SongArtistTitle, Path=Text}" Style="{DynamicResource SongArtistShadowStyle}"/>
+            <TextBlock Name="SongArtistTitle" Text="" Style="{DynamicResource SongArtistStyle}"/>
+        </Grid>
+        <ProgressBar Style="{DynamicResource SongProgressStyle}" Name="Progress" Cursor="Hand" MouseLeftButtonUp="Progress_MouseLeftButtonUp"/>
+
+        <StackPanel Style="{DynamicResource ControlButtonsPanelStyle}">
+            <Button Name="PrevButton" Style="{DynamicResource PrevButtonStyle}" Click="PrevButton_Click"/>
+            <ToggleButton Name="PlayButton" Style="{DynamicResource PlayButtonStyle}" Click="PlayButton_Click"/>
+            <Button Name="NextButton" Style="{DynamicResource NextButtonStyle}" Click="NextButton_Click"/>
+        </StackPanel>
+        <TextBlock Name="VolumeBox" Style="{DynamicResource VolumeBoxStyle}"/>
+    </Grid>
+</UserControl>

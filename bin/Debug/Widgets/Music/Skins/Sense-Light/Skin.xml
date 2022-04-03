@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Skin>
+  <Author>Stealth</Author>
+  <Version>1.0</Version>
+  <Name>Sense Light</Name>
+  <Contacts>stealth2008@live.ru</Contacts>
+  <Description>Light version of Sense skin</Description>
+  <!-- Widget region. Used for Aero Glass. -1 disables aero -->
+  <Region>
+    <Left>17</Left>
+    <Top>40</Top>
+    <Right>238</Right>
+    <Bottom>340</Bottom>
+    <RadiusX>10</RadiusX>
+    <RadiusY>10</RadiusY>
+  </Region>
+</Skin>

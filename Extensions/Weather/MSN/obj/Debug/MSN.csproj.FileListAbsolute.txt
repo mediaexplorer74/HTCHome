@@ -1,0 +1,7 @@
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\MSN.dll
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\MSN.pdb
+C:\Users\media\source\repos\HTCHome\Extensions\Weather\MSN\obj\Debug\MSN.csproj.AssemblyReference.cache
+C:\Users\media\source\repos\HTCHome\Extensions\Weather\MSN\obj\Debug\MSN.csproj.CoreCompileInputs.cache
+C:\Users\media\source\repos\HTCHome\Extensions\Weather\MSN\obj\Debug\MSN.csproj.CopyComplete
+C:\Users\media\source\repos\HTCHome\Extensions\Weather\MSN\obj\Debug\MSN.dll
+C:\Users\media\source\repos\HTCHome\Extensions\Weather\MSN\obj\Debug\MSN.pdb

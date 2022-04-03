@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="NewsWidget.NewsItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Name="this"
+             Margin="10,3,10,3" Loaded="this_Loaded" Opacity="0">
+    <UserControl.Resources>
+        <Storyboard x:Key="LoadAnim">
+            <DoubleAnimation Storyboard.TargetName="this" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.5"/>
+        </Storyboard>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="2"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Name="TitleTextBlock" Text="Header" Foreground="White" FontWeight="Medium"  FontSize="16" TextWrapping="Wrap" TextTrimming="CharacterEllipsis"  MaxHeight="50" Cursor="Hand" MouseLeftButtonDown="TitleTextBlockMouseLeftButtonDown"/>
+        <DockPanel Grid.Row="1" MaxHeight="57">
+            <Image Name="IconImage" MaxWidth="57" Margin="0,3,5,0" Visibility="Collapsed" RenderOptions.BitmapScalingMode="HighQuality" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="UniformToFill" TextOptions.TextFormattingMode="Display"/>
+            <TextBlock Name="ContentTextBlock" Text="Content" Foreground="White" FontSize="14" TextWrapping="Wrap" TextTrimming="CharacterEllipsis"/>
+        </DockPanel>
+        <TextBlock Grid.Row="2" Margin="0,3,0,3" FontFamily="pack://application:,,,/Fonts/#Droid Serif" Name="FooterTextBlock" Text="Footer" Foreground="#b1b1b1" FontSize="12" TextTrimming="CharacterEllipsis"/>
+        <Rectangle Grid.Row="3" Height="1" Fill="#272727" VerticalAlignment="Top" Margin="-10,0,-10,0" Opacity="0.7"/>
+        <Rectangle Grid.Row="3" Height="1" Fill="#818181" VerticalAlignment="Bottom" Margin="-10,0,-10,0" Opacity="0.7"/>
+    </Grid>
+</UserControl>

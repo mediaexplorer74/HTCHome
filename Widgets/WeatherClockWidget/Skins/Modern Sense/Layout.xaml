@@ -1,0 +1,285 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+    <s:String x:Key="MainDateFormat">ddd, MMM d</s:String>
+    <s:String x:Key="ForecastDateFormat">ddd</s:String>
+    <Style x:Key="WidgetStyle" TargetType="UserControl">
+        <Setter Property="Width" Value="500"/>
+        <Setter Property="Height" Value="300"/>
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+    </Style>
+    <Style x:Key="OverlayStyle" TargetType="Image">
+        <Setter Property="Margin"  Value="0,-20,0,0"/>
+    </Style>
+    <Style x:Key="BasePanelStyle" TargetType="Grid">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,-70,0,0"/>
+    </Style>
+    <Style x:Key="BaseStyle" TargetType="Image">
+        <Setter Property="Width" Value="330"/>
+        <Setter Property="Height" Value="200"/>
+        <Setter Property="Stretch" Value="Fill"/>
+        <Setter Property="Opacity" Value="1"/>
+    </Style>
+    <Style x:Key="LightningBg1Style" TargetType="Rectangle">
+        <Setter Property="Fill" Value="White"/>
+        <Setter Property="Opacity" Value="0"/>
+        <Setter Property="Width" Value="295"/>
+        <Setter Property="Height" Value="165"/>
+        <Setter Property="RadiusX" Value="5"/>
+        <Setter Property="RadiusY" Value="5"/>
+    </Style>
+    <Style x:Key="LightningBg2Style" TargetType="Rectangle">
+        <Setter Property="Fill" Value="White"/>
+        <Setter Property="Opacity" Value="0"/>
+        <Setter Property="Width" Value="295"/>
+        <Setter Property="Height" Value="165"/>
+        <Setter Property="RadiusX" Value="5"/>
+        <Setter Property="RadiusY" Value="5"/>
+    </Style>
+    <Style x:Key="FrostBgStyle" TargetType="Rectangle">
+        <Setter Property="Fill" Value="#d9f3ff"/>
+        <Setter Property="Opacity" Value="0"/>
+        <Setter Property="Width" Value="298"/>
+        <Setter Property="Height" Value="165"/>
+        <Setter Property="RadiusX" Value="5"/>
+        <Setter Property="RadiusY" Value="5"/>
+        <Setter Property="Margin" Value="3,0,0,0"/>
+    </Style>
+    <Style x:Key="FrostLeftStyle" TargetType="Image">
+        <Setter Property="Opacity" Value="0"/>
+        <Setter Property="Width" Value="90"/>
+        <Setter Property="Height" Value="112"/>
+        <Setter Property="Margin" Value="-205,60,0,0"/>
+    </Style>
+    <Style x:Key="FrostRightStyle" TargetType="Image">
+        <Setter Property="Opacity" Value="0"/>
+        <Setter Property="Width" Value="90"/>
+        <Setter Property="Height" Value="112"/>
+        <Setter Property="Margin" Value="214,60,0,0"/>
+    </Style>
+    <Style x:Key="WeatherPanelStyle" TargetType="Grid">
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Height" Value="80"/>
+        <Setter Property="Margin" Value="15,0,15,0"/>
+    </Style>
+    <Style x:Key="Icicle1Style" TargetType="UserControl">
+        <Setter Property="Canvas.Left" Value="102"/>
+        <Setter Property="Canvas.Top" Value="30"/>
+    </Style>
+    <Style x:Key="Icicle2Style" TargetType="UserControl">
+        <Setter Property="Canvas.Left" Value="241"/>
+        <Setter Property="Canvas.Top" Value="30"/>
+    </Style>
+    <Style x:Key="Icicle3Style" TargetType="UserControl">
+        <Setter Property="Canvas.Left" Value="380"/>
+        <Setter Property="Canvas.Top" Value="30"/>
+    </Style>
+
+    <Style x:Key="CityGridStyle" TargetType="Grid">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Width" Value="100"/>
+        <Setter Property="Margin" Value="10,4,0,0"/>
+    </Style>
+    <Style x:Key="CityTextStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+    </Style>
+    <Style x:Key="CityTextShadowStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Margin" Value="1,1,0,0"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Opacity" Value="0.7"/>
+        <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+    </Style>
+
+    <Style x:Key="WeatherGridStyle" TargetType="Grid">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Width" Value="110"/>
+        <Setter Property="Margin" Value="10,27,0,0"/>
+    </Style>
+    <Style x:Key="WeatherTextStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="LineHeight" Value="13"/>
+        <Setter Property="LineStackingStrategy" Value="BlockLineHeight"/>
+    </Style>
+    <Style x:Key="WeatherTextShadowStyle" TargetType="TextBlock">
+        <Setter Property="Margin" Value="1,1,0,0"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="Opacity" Value="0.7"/>
+        <Setter Property="LineHeight" Value="13"/>
+        <Setter Property="LineStackingStrategy" Value="BlockLineHeight"/>
+    </Style>
+
+    <Style x:Key="WeatherIconGridStyle" TargetType="Grid">
+        <Setter Property="Height" Value="110"/>
+        <Setter Property="Width" Value="110"/>
+        <Setter Property="Margin" Value="0,-20,0,0"/>
+    </Style>
+
+    <Style x:Key="DateGridStyle" TargetType="Grid">
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Margin" Value="0,3,10,0"/>
+    </Style>
+    <Style x:Key="DateTextStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="17"/>
+    </Style>
+    <Style x:Key="DateTextShadowStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Margin" Value="1,1,0,0"/>
+        <Setter Property="FontSize" Value="17"/>
+        <Setter Property="Opacity" Value="0.7"/>
+    </Style>
+
+    <Style x:Key="TemperatureGridStyle" TargetType="Grid">
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Margin" Value="0,20,10,0"/>
+    </Style>
+    <Style x:Key="TemperatureTextStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="28"/>
+    </Style>
+    <Style x:Key="TemperatureTextShadowStyle" TargetType="TextBlock">
+        <Setter Property="Margin" Value="1,1,0,0"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontSize" Value="28"/>
+        <Setter Property="Opacity" Value="0.7"/>
+    </Style>
+
+    <Style x:Key="ClockPanelStyle" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,-35,0,35"/>
+    </Style>
+
+    <Style x:Key="HoursTabStyle" TargetType="UserControl"/>
+    <Style x:Key="MinutesTabStyle" TargetType="UserControl"/>
+
+    <Style x:Key="ForecastGridStyle" TargetType="Grid">
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,0,0,-3"/>
+    </Style>
+    <Style x:Key="ForecastBaseStyle" TargetType="Image">
+        <Setter Property="Width" Value="330"/>
+        <Setter Property="Height" Value="100"/>
+        <Setter Property="Stretch" Value="Fill"/>
+        <Setter Property="Opacity" Value="1"/>
+        <Setter Property="SnapsToDevicePixels" Value="False"/>
+        <Setter Property="Margin" Value="0,0,0,0"/>
+    </Style>
+    <Style x:Key="ForecastFrostBgStyle" TargetType="Rectangle">
+        <Setter Property="Fill" Value="#d9f3ff"/>
+        <Setter Property="Opacity" Value="0"/>
+        <Setter Property="Width" Value="294"/>
+        <Setter Property="Height" Value="55"/>
+        <Setter Property="RadiusX" Value="5"/>
+        <Setter Property="RadiusY" Value="5"/>
+        <Setter Property="Margin" Value="2,3,0,0"/>
+    </Style>
+    <Style x:Key="ForecastPanelStyle" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+    <Style x:Key="ForecastDay1Style" TargetType="UserControl">
+        <Setter Property="Margin" Value="0,-40,0,0"/>
+    </Style>
+    <Style x:Key="ForecastDay2Style" TargetType="UserControl">
+        <Setter Property="Margin" Value="0,-40,0,0"/>
+    </Style>
+    <Style x:Key="ForecastDay3Style" TargetType="UserControl">
+        <Setter Property="Margin" Value="0,-40,0,0"/>
+    </Style>
+    <Style x:Key="ForecastDay4Style" TargetType="UserControl">
+        <Setter Property="Margin" Value="0,-40,0,0"/>
+    </Style>
+    <Style x:Key="ForecastDay5Style" TargetType="UserControl">
+        <Setter Property="Margin" Value="0,-40,0,0"/>
+    </Style>
+
+
+    <!-- ForecastItem style -->
+    <Style x:Key="ForecastItemBaseStyle" TargetType="Grid">
+        <Setter Property="Width" Value="56"/>
+        <Setter Property="Margin" Value="4,0,0,0"/>
+    </Style>
+
+    <Style x:Key="ForecastItemDayGridStyle" TargetType="Grid">
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Margin" Value="0,0,0,22"/>
+    </Style>
+    <Style x:Key="ForecastItemDayStyle" TargetType="TextBlock">
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Foreground" Value="LightGray"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+    <Style x:Key="ForecastItemDayShadowStyle" TargetType="TextBlock">
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Margin" Value="2,0,0,-1"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Opacity" Value="0.6"/>
+    </Style>
+
+    <Style x:Key="ForecastItemTemperaturePanelStyle" TargetType="StackPanel">
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="Margin" Value="0,0,0,37"/>
+    </Style>
+    
+    <Style x:Key="ForecastItemTemperatureHGridStyle" TargetType="Grid">
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+    </Style>
+    <Style x:Key="ForecastItemTemperatureHStyle" TargetType="TextBlock">
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontWeight" Value="DemiBold"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+    <Style x:Key="ForecastItemTemperatureHShadowStyle" TargetType="TextBlock">
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Margin" Value="2,0,0,-1"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Opacity" Value="0.7"/>
+    </Style>
+
+    <Style x:Key="ForecastItemTemperatureLGridStyle" TargetType="Grid">
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Margin" Value="0,0,0,0"/>
+    </Style>
+    <Style x:Key="ForecastItemTemperatureLStyle" TargetType="TextBlock">
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Foreground" Value="LightGray"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontWeight" Value="DemiBold"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+    <Style x:Key="ForecastItemTemperatureLShadowStyle" TargetType="TextBlock">
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Margin" Value="2,1,0,-1"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Opacity" Value="0.6"/>
+    </Style>
+
+    <Style x:Key="ForecastItemIconStyle" TargetType="Image">
+        <Setter Property="Width" Value="55"/>
+        <Setter Property="Height" Value="54"/>
+        <Setter Property="Stretch" Value="Fill"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+</ResourceDictionary>

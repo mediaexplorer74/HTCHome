@@ -1,0 +1,78 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WeatherClockWidget.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Left" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">-100</Value>
+    </Setting>
+    <Setting Name="Top" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">-100</Value>
+    </Setting>
+    <Setting Name="Debug" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DegreeType" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="EnableSounds" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="EnableWallpaperChanging" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="EnableWeatherAnimation" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Interval" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="LocationCode" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Pinned" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ScaleFactor" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="ShowIconOnTaskbar" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowForecast" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Skin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Modern Sense</Value>
+    </Setting>
+    <Setting Name="Sunrise" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
+    <Setting Name="Sunset" Type="System.String" Scope="User">
+      <Value Profile="(Default)">22</Value>
+    </Setting>
+    <Setting Name="TimeMode" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="TopMost" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="WeatherProvider" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MSN</Value>
+    </Setting>
+    <Setting Name="EnableWeather" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="LastCities" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Opacity" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="WallpapersFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ChangeBg" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

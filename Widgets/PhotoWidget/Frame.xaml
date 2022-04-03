@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="PhotoWidget.Frame"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Name="this"
+             Height="250" Width="362" RenderTransformOrigin="0.5,0.5">
+    <UserControl.Resources>
+        <Storyboard x:Key="FadeIn" Completed="Storyboard_Completed">
+            <DoubleAnimation Storyboard.TargetName="Rotation" Storyboard.TargetProperty="Angle" From="8" To="0" Duration="0:0:0.2" FillBehavior="Stop"/>
+            <DoubleAnimation Storyboard.TargetName="this" Storyboard.TargetProperty="Opacity" From="0.7" To="1" Duration="0:0:0.2" FillBehavior="Stop"/>
+        </Storyboard>
+        <Storyboard x:Key="FadeOut" Completed="Storyboard_Completed_1">
+            <DoubleAnimation Storyboard.TargetName="Translation" Storyboard.TargetProperty="Y" From="0" To="-60" Duration="0:0:0.2" AccelerationRatio="0.3" FillBehavior="Stop"/>
+            <DoubleAnimation Storyboard.TargetName="this" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.1" BeginTime="0:0:0.1" FillBehavior="Stop"/>
+        </Storyboard>
+        <Storyboard x:Key="FadeBack">
+            <!--<DoubleAnimation Storyboard.TargetName="Rotation" Storyboard.TargetProperty="Angle" From="0" To="8" Duration="0:0:0.2" FillBehavior="Stop" DecelerationRatio="0.3"/>-->
+            <DoubleAnimation Storyboard.TargetName="this" Storyboard.TargetProperty="Opacity" From="0" To="0.7" Duration="0:0:0.2" FillBehavior="Stop"/>
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.RenderTransform>
+        <TransformGroup>
+            <RotateTransform x:Name="Rotation"/>
+            <TranslateTransform x:Name="Translation"/>
+        </TransformGroup>
+    </UserControl.RenderTransform>
+    <Grid>
+        <Image Name="FrameBg" Source="/Photo;component/Resources/photo_frame_landscape.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image Name="FrameImage" Source="/Photo;component/Resources/preview_landscape.png" Margin="12,14,12,14" Stretch="UniformToFill" RenderOptions.BitmapScalingMode="HighQuality"/>
+    </Grid>
+</UserControl>

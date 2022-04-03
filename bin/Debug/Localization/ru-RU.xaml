@@ -1,0 +1,45 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+    <s:String x:Key="LocaleCode">ru-RU</s:String>
+    <s:String x:Key="LocaleName">Русский</s:String>
+    <s:String x:Key="LocaleAuthor">Автор перевода: Stealth</s:String>
+    <!-- General strings -->
+    <s:String x:Key="SkinInstalled">Скин установлен!</s:String>
+    <s:String x:Key="SkinNotInstalled">Невозможно установить скин!</s:String>
+    <s:String x:Key="SkinNotInstalledNoAccess">Невозможно установить скин! Отсутствует доступ к файлам. Закройте HTC Home и попробуйте снова.</s:String>
+    <s:String x:Key="ExtensionInstalled">Расширение установлено!</s:String>
+    <s:String x:Key="ExtensionNotInstalled">Невозможно установить расширение!</s:String>
+    <s:String x:Key="ExtensionNotInstalledNoAccess">Невозможно установить расширение! Отсутствует доступ к файлам. Закройте HTC Home и попробуйте снова.</s:String>
+    <!-- Menu strings -->
+    <s:String x:Key="Pin">Закрепить</s:String>
+    <s:String x:Key="Refresh">Обновить</s:String>
+    <s:String x:Key="Options">Настройки</s:String>
+    <s:String x:Key="Size">Размер:</s:String>
+    <s:String x:Key="Opacity">Непрозрачность:</s:String>
+    <s:String x:Key="HomeOptions">Настройки HTC Home</s:String>
+    <s:String x:Key="Close">Закрыть виджет</s:String>
+    <s:String x:Key="CloseHome">Закрыть HTC Home</s:String>
+    <s:String x:Key="Widgets">Виджеты</s:String>
+    <!-- Options strings -->
+    <s:String x:Key="Title">Настройки</s:String>
+    <s:String x:Key="General">Общие</s:String>
+    <s:String x:Key="About">О программе</s:String>
+    <s:String x:Key="OK">ОК</s:String>
+    <s:String x:Key="Cancel">Отмена</s:String>
+    <s:String x:Key="Apply">Применить</s:String>
+    <s:String x:Key="Autostart">Запускать при запуске Windows</s:String>
+    <s:String x:Key="TopMost">Поверх всех окон</s:String>
+    <s:String x:Key="Language">Язык:</s:String>
+    <s:String x:Key="EnableGlass">Включить Aero Glass</s:String>
+    <s:String x:Key="EnableTrayIcon">Отображать иконку в области уведомлений</s:String>
+    <s:String x:Key="RestartText">Некоторые настройки вступят в силу после перезапуска программы</s:String>
+    <s:String x:Key="CheckForUpdates">Проверять наличие обновлений при запуске</s:String>
+    <!-- Updater strings -->
+    <s:String x:Key="UpdaterTitle">Служба обновлений HTC Home</s:String>
+    <s:String x:Key="UpdateAvailable">Доступна новая версия. Подробности на http://htchome.org</s:String>
+    <s:String x:Key="Yes">Да</s:String>
+    <s:String x:Key="No">Нет</s:String>
+    <s:String x:Key="Downloading">Загружается</s:String>
+    <s:String x:Key="DownloadFinished">Загрузка обновлений завершена. Нажмите кнопку Закрыть, чтобы перезапустить HTC Home.</s:String>
+</ResourceDictionary>

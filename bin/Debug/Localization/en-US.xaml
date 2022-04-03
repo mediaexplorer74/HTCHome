@@ -1,0 +1,44 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+    <s:String x:Key="LocaleCode">en-US</s:String>
+    <s:String x:Key="LocaleName">English</s:String>
+    <s:String x:Key="LocaleAuthor">Translated by Stealth</s:String>
+    <!-- General strings -->
+    <s:String x:Key="SkinInstalled">Skin installed!</s:String>
+    <s:String x:Key="SkinNotInstalled">Skin installation failed!</s:String>
+    <s:String x:Key="SkinNotInstalledNoAccess">Skin installation failed! Can't access to files. Close HTC Home and try again.</s:String>
+    <s:String x:Key="ExtensionInstalled">Extension installed!</s:String>
+    <s:String x:Key="ExtensionNotInstalled">Extension installation failed! Can't access to files. Close HTC Home and try again.</s:String>
+    <!-- Menu strings -->
+    <s:String x:Key="Pin">Pin</s:String>
+    <s:String x:Key="Refresh">Refresh</s:String>
+    <s:String x:Key="Options">Settings</s:String>
+    <s:String x:Key="Size">Size:</s:String>
+    <s:String x:Key="Opacity">Opacity:</s:String>
+    <s:String x:Key="HomeOptions">HTC Home settings</s:String>
+    <s:String x:Key="Close">Close widget</s:String>
+    <s:String x:Key="CloseHome">Close HTC Home</s:String>
+    <s:String x:Key="Widgets">Widgets</s:String>
+    <!-- Options strings -->
+    <s:String x:Key="Title">Options</s:String>
+    <s:String x:Key="General">General</s:String>
+    <s:String x:Key="About">About</s:String>
+    <s:String x:Key="OK">OK</s:String>
+    <s:String x:Key="Cancel">Cancel</s:String>
+    <s:String x:Key="Apply">Apply</s:String>
+    <s:String x:Key="Autostart">Autostart with Windows</s:String>
+    <s:String x:Key="TopMost">Top most</s:String>
+    <s:String x:Key="Language">Language:</s:String>
+    <s:String x:Key="EnableGlass">Enable Aero Glass</s:String>
+    <s:String x:Key="EnableTrayIcon">Show icon in taskbar notification area</s:String>
+    <s:String x:Key="RestartText">Some options will be applied after restart</s:String>
+    <s:String x:Key="CheckForUpdates">Check for updates at startup</s:String>
+    <!-- Updater strings -->
+    <s:String x:Key="UpdaterTitle">HTC Home updates service</s:String>
+    <s:String x:Key="UpdateAvailable">There is new version available. Go to the http://www.htchome.org to get more information.</s:String>
+    <s:String x:Key="Yes">Yes</s:String>
+    <s:String x:Key="No">No</s:String>
+    <s:String x:Key="Downloading">Downloading</s:String>
+    <s:String x:Key="DownloadFinished">Download finished. Press the Close button to restart HTC Home.</s:String>
+</ResourceDictionary>

@@ -1,0 +1,7 @@
+C:\Users\media\source\repos\HTCHome\bin\Debug\HTCHome.Core.dll
+C:\Users\media\source\repos\HTCHome\bin\Debug\HTCHome.Core.pdb
+C:\Users\media\source\repos\HTCHome\HTCHome.Core\obj\Debug\HTCHome.Core.csproj.AssemblyReference.cache
+C:\Users\media\source\repos\HTCHome\HTCHome.Core\obj\Debug\HTCHome.Core.csproj.CoreCompileInputs.cache
+C:\Users\media\source\repos\HTCHome\HTCHome.Core\obj\Debug\HTCHome.Core.csproj.CopyComplete
+C:\Users\media\source\repos\HTCHome\HTCHome.Core\obj\Debug\HTCHome.Core.dll
+C:\Users\media\source\repos\HTCHome\HTCHome.Core\obj\Debug\HTCHome.Core.pdb

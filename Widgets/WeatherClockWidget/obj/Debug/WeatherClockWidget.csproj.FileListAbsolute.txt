@@ -1,0 +1,246 @@
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\FlipAnim\Digits\0.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\FlipAnim\Digits\1.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\FlipAnim\Digits\2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\FlipAnim\Digits\3.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\FlipAnim\Digits\4.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\FlipAnim\Digits\5.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\FlipAnim\Digits\6.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\FlipAnim\Digits\7.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\FlipAnim\Digits\8.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\FlipAnim\Digits\9.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\FlipAnim\Background\flip_clock_tab_down.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\FlipAnim\Background\flip_clock_tab_up.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\forecast_base_default.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\bg_12.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\bg_19.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\bg_21.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\bg_22.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\bg_23.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\bg_24.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\bg_20.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\bg_43.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\bg_44.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\bg_13.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\bg_14.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\bg_15.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\bg_16.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\bg_17.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\bg_18.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\forecast_bg_12.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\forecast_bg_13.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\forecast_bg_14.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\forecast_bg_15.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\forecast_bg_16.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\forecast_bg_17.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\forecast_bg_18.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\forecast_bg_20.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\forecast_bg_21.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\forecast_bg_22.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\forecast_bg_23.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\forecast_bg_24.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\forecast_bg_19.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\forecast_bg_43.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Backgrounds\forecast_bg_44.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Overlays\o_12.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Overlays\o_13.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Overlays\o_14.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Overlays\o_15.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Overlays\o_16.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Overlays\o_17.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Overlays\o_18.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Overlays\o_19.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Overlays\o_20.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Overlays\o_21.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Overlays\o_22.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Overlays\o_23.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Overlays\o_24.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Overlays\o_43.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Overlays\o_44.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Sense Wide\base_default.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Sense Wide\forecast_base_default.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Sense Wide\Preview.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Sense Wide\Skin.xml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Wallpapers\Cloudy\Readme.txt
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Wallpapers\Misty\Readme.txt
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Wallpapers\Rainy\Readme.txt
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Wallpapers\Snowy\Readme.txt
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Wallpapers\Stormy\Readme.txt
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Wallpapers\Sunny\Readme.txt
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Wallpapers\Windy\Readme.txt
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Localization\ru-RU.xaml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Localization\en-US.xaml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\base_default.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\overlay_icon.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\raindrop_01.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\raindrop_02.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\raindrop_03.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\raindrop_04.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\raindrop_05.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\snowflake1.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\snowflake2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\snowflake3.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\snowflake4.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\snowflake5.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Sense\base_default.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Sense\forecast_base_default.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Sense\Preview.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Sense\Skin.xml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Layout.xaml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Sense\Layout.xaml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Sense Wide\Layout.xaml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\FlipAnim\Background\flip_bg.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\icon.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Preview.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Skins\Modern Sense\Skin.xml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Sounds\Cold.wav
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Sounds\Fog.wav
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Sounds\Hot.wav
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Sounds\Showers.wav
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Sounds\Snow.wav
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Sounds\Thunder.wav
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Sounds\Windy.wav
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\cloud_1.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\cloud_2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\cloud_3.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\cloud_4.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\cloud_5.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\cloud_6.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\cloud_7.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\cloud_8.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\cloud_9.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\fall_ice.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\fall_sleet.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\fall_snowflake.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\flare.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\fog.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\frost_left.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\frost_right.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\icicle1.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\icicle2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\icicle3.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\layer_cloud1.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\layer_cloud2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\layer_cloud3.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\layer_cloud4.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\layer_cloud5.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\layer_drop1.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\layer_drop2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\layer_drop3.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\layer_drop4.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\layer_drop5.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\layer_drop6.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\layer_drop7.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\layer_flur1.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\layer_flur2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\layer_stars2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\lightning_01.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\lightning_02.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\lightning_03.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\rain.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\rain1.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\rain2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\rain3.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\raindrop_streaks.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\rain_fall.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\rain_wiper.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\snow1.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\snow2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\snow3.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\snow4.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\snow5.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\sun.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\sun_glow.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_1.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_11.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_12.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_13.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_14.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_15.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_16.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_17.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_18.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_19.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_20.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_21.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_22.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_23.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_24.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_25.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_26.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_29.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_3.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_30.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_31.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_32.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_33.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_34.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_35.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_36.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_37.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_38.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_39.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_4.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_40.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_41.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_42.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_43.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_44.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_5.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_51.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_52.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_53.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_54.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_6.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_7.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\Weather\weather_8.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\pm.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\Resources\am.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\WeatherClock.dll.config
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\WeatherClock.dll
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\WeatherClock\WeatherClock.pdb
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherClockWidget.csproj.AssemblyReference.cache
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\FlipClockControl.baml
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\ForecastItem.baml
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\LocationItem.baml
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\Options.baml
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherAnimation\Cloud.baml
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherAnimation\Icicle.baml
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherAnimation\Lightning.baml
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherAnimation\RainCloud.baml
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherAnimation\Raindrop.baml
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherAnimation\Raindrop2.baml
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherAnimation\RainWiper.baml
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherAnimation\Snowflake.baml
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\Wizard\LastPage.baml
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\Wizard\Page1.baml
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\Wizard\Page2.baml
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\Wizard\Page3.baml
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\Wizard\WizardWindow.baml
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\FlipClockControl.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\ForecastItem.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\LocationItem.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\Options.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherAnimation\Cloud.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherAnimation\Icicle.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherAnimation\Lightning.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherAnimation\RainCloud.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherAnimation\Raindrop.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherAnimation\Raindrop2.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherAnimation\RainWiper.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherAnimation\Snowflake.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherClock.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\Wizard\LastPage.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\Wizard\Page1.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\Wizard\Page2.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\Wizard\Page3.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\Wizard\WizardWindow.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherClock_MarkupCompile.cache
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherClock_MarkupCompile.lref
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherClock.baml
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherClock.g.resources
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherClockWidget.csproj.CoreCompileInputs.cache
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherClockWidget.csproj.CopyComplete
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherClock.dll
+C:\Users\media\source\repos\HTCHome\Widgets\WeatherClockWidget\obj\Debug\WeatherClock.pdb

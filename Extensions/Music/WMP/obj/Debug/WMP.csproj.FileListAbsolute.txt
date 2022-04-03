@@ -1,0 +1,7 @@
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Music\WMP\WMP.dll
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Music\WMP\WMP.pdb
+C:\Users\media\source\repos\HTCHome\Extensions\Music\WMP\obj\Debug\WMP.csproj.AssemblyReference.cache
+C:\Users\media\source\repos\HTCHome\Extensions\Music\WMP\obj\Debug\WMP.csproj.CoreCompileInputs.cache
+C:\Users\media\source\repos\HTCHome\Extensions\Music\WMP\obj\Debug\WMP.csproj.CopyComplete
+C:\Users\media\source\repos\HTCHome\Extensions\Music\WMP\obj\Debug\WMP.dll
+C:\Users\media\source\repos\HTCHome\Extensions\Music\WMP\obj\Debug\WMP.pdb

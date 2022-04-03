@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="WeatherClockWidget.LocationItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="20" Opacity="0">
+    <UserControl.RenderTransform>
+        <TranslateTransform x:Name="Transform"/>
+    </UserControl.RenderTransform>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UserControl.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation x:Name="TransformAnim" Storyboard.TargetName="Transform" Storyboard.TargetProperty="X" From="-35" To="0" Duration="0:0:0.3"/>
+                    <DoubleAnimation x:Name="OpacityAnim" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.3"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UserControl.MouseEnter">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="Bg2" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.12"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UserControl.MouseLeave">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="Bg2" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.12"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Grid>
+        <Rectangle Name="Bg2" Stroke="#B8D6FB" RadiusX="4" RadiusY="4" Opacity="0">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#11FAFBFD" Offset="0"/>
+                    <GradientStop Color="#B2EBF3FD" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Name="Bg1" Stroke="#B8D6FB" RadiusX="4" RadiusY="4" Opacity="0">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#B2DCEBFC" Offset="0"/>
+                    <GradientStop Color="#7FC1DBFC" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Name="ItemTitleTextBlock" Margin="5,0,5,0" Text="Header" TextAlignment="Left" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
+    </Grid>
+</UserControl>

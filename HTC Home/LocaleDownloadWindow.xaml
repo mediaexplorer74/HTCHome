@@ -1,0 +1,18 @@
+﻿<Window x:Class="HTCHome.LocaleDownloadWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Downloaing localization" Height="140" Width="500"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" SourceInitialized="Window_SourceInitialized">
+    <Grid>
+        <Rectangle>
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#FFFFFFFF" Offset="0"/>
+                    <GradientStop Color="#e3e7ec" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Name="MessageText" Text="Downloading {0} language" Margin="10" TextWrapping="Wrap"/>
+        <ProgressBar Name="DownloadProgress" Height="15" Margin="10" Visibility="Hidden"/>
+    </Grid>
+</Window>

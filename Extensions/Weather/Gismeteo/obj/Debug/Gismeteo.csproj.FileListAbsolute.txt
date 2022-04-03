@@ -1,0 +1,205 @@
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\FlipAnim\Digits\0.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\FlipAnim\Digits\1.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\FlipAnim\Digits\2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\FlipAnim\Digits\3.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\FlipAnim\Digits\4.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\FlipAnim\Digits\5.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\FlipAnim\Digits\6.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\FlipAnim\Digits\7.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\FlipAnim\Digits\8.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\FlipAnim\Digits\9.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\FlipAnim\Background\flip_clock_tab_down.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\FlipAnim\Background\flip_clock_tab_up.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\forecast_base_default.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\bg_12.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\bg_19.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\bg_21.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\bg_22.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\bg_23.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\bg_24.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\bg_20.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\bg_43.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\bg_44.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\bg_13.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\bg_14.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\bg_15.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\bg_16.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\bg_17.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\bg_18.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\forecast_bg_12.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\forecast_bg_13.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\forecast_bg_14.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\forecast_bg_15.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\forecast_bg_16.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\forecast_bg_17.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\forecast_bg_18.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\forecast_bg_20.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\forecast_bg_21.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\forecast_bg_22.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\forecast_bg_23.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\forecast_bg_24.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\forecast_bg_19.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\forecast_bg_43.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Backgrounds\forecast_bg_44.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Overlays\o_12.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Overlays\o_13.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Overlays\o_14.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Overlays\o_15.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Overlays\o_16.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Overlays\o_17.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Overlays\o_18.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Overlays\o_19.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Overlays\o_20.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Overlays\o_21.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Overlays\o_22.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Overlays\o_23.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Overlays\o_24.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Overlays\o_43.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Overlays\o_44.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Sense Wide\base_default.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Sense Wide\forecast_base_default.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Sense Wide\Preview.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Sense Wide\Skin.xml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Wallpapers\Cloudy\Readme.txt
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Wallpapers\Misty\Readme.txt
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Wallpapers\Rainy\Readme.txt
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Wallpapers\Snowy\Readme.txt
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Wallpapers\Stormy\Readme.txt
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Wallpapers\Sunny\Readme.txt
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Wallpapers\Windy\Readme.txt
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Localization\ru-RU.xaml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Localization\en-US.xaml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\base_default.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\overlay_icon.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\raindrop_01.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\raindrop_02.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\raindrop_03.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\raindrop_04.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\raindrop_05.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\snowflake1.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\snowflake2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\snowflake3.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\snowflake4.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\snowflake5.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Sense\base_default.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Sense\forecast_base_default.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Sense\Preview.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Sense\Skin.xml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Layout.xaml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Sense\Layout.xaml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Sense Wide\Layout.xaml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\FlipAnim\Background\flip_bg.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\icon.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Preview.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Skins\Modern Sense\Skin.xml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Sounds\Cold.wav
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Sounds\Fog.wav
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Sounds\Hot.wav
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Sounds\Showers.wav
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Sounds\Snow.wav
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Sounds\Thunder.wav
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Sounds\Windy.wav
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\cloud_1.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\cloud_2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\cloud_3.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\cloud_4.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\cloud_5.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\cloud_6.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\cloud_7.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\cloud_8.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\cloud_9.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\fall_ice.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\fall_sleet.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\fall_snowflake.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\flare.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\fog.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\frost_left.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\frost_right.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\icicle1.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\icicle2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\icicle3.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\layer_cloud1.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\layer_cloud2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\layer_cloud3.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\layer_cloud4.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\layer_cloud5.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\layer_drop1.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\layer_drop2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\layer_drop3.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\layer_drop4.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\layer_drop5.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\layer_drop6.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\layer_drop7.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\layer_flur1.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\layer_flur2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\layer_stars2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\lightning_01.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\lightning_02.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\lightning_03.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\rain.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\rain1.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\rain2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\rain3.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\raindrop_streaks.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\rain_fall.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\rain_wiper.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\snow1.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\snow2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\snow3.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\snow4.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\snow5.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\sun.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\sun_glow.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_1.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_11.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_12.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_13.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_14.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_15.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_16.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_17.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_18.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_19.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_2.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_20.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_21.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_22.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_23.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_24.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_25.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_26.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_29.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_3.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_30.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_31.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_32.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_33.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_34.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_35.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_36.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_37.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_38.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_39.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_4.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_40.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_41.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_42.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_43.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_44.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_5.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_51.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_52.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_53.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_54.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_6.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_7.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\Weather\weather_8.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\pm.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Resources\am.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Gismeteo.dll
+C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\Gismeteo.pdb
+C:\Users\media\source\repos\HTCHome\Extensions\Weather\Gismeteo\obj\Debug\Gismeteo.csproj.AssemblyReference.cache
+C:\Users\media\source\repos\HTCHome\Extensions\Weather\Gismeteo\obj\Debug\Gismeteo.csproj.CoreCompileInputs.cache
+C:\Users\media\source\repos\HTCHome\Extensions\Weather\Gismeteo\obj\Debug\Gismeteo.csproj.CopyComplete
+C:\Users\media\source\repos\HTCHome\Extensions\Weather\Gismeteo\obj\Debug\Gismeteo.dll
+C:\Users\media\source\repos\HTCHome\Extensions\Weather\Gismeteo\obj\Debug\Gismeteo.pdb

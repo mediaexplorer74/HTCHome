@@ -1,0 +1,59 @@
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Localization\en-US.xaml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Localization\ru-RU.xaml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Resources\clock_center_dot.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Resources\clock_hour.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Resources\clock_minute.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Resources\clock_second.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Resources\clock_base.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Day Extra\Preview.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Day\Preview.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Night Extra\Preview.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Night\Preview.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Travel Day\Preview.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Travel Night\clock_base.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Travel Night\clock_center_dot.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Travel Night\clock_hour.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Travel Night\clock_minute.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Travel Night\clock_second.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Travel Night\Preview.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Travel Night\Skin.xml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Night\clock_base.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Night Extra\clock_base.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Night\clock_center_dot.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Night\clock_hour.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Night\clock_minute.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Night\clock_second.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Night\Skin.xml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Night Extra\Skin.xml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Day Extra\Skin.xml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Day\clock_base.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Travel Day\Skin.xml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Travel Day\clock_hour.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Travel Day\clock_minute.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Travel Day\clock_second.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Travel Day\clock_base.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Travel Day\clock_center_dot.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Day\Skin.xml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Day Extra\Layout.xaml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Day\Layout.xaml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Night Extra\Layout.xaml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Night\Layout.xaml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Travel Day\Layout.xaml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Skins\Travel Night\Layout.xaml
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Resources\icon.png
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Clock.dll.config
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Clock.dll
+C:\Users\media\source\repos\HTCHome\bin\Debug\Widgets\Clock\Clock.pdb
+C:\Users\media\source\repos\HTCHome\Widgets\ClockWidget\obj\Debug\ClockWidget.csproj.AssemblyReference.cache
+C:\Users\media\source\repos\HTCHome\Widgets\ClockWidget\obj\Debug\Options.baml
+C:\Users\media\source\repos\HTCHome\Widgets\ClockWidget\obj\Debug\WidgetControl.baml
+C:\Users\media\source\repos\HTCHome\Widgets\ClockWidget\obj\Debug\Options.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\ClockWidget\obj\Debug\WidgetControl.g.cs
+C:\Users\media\source\repos\HTCHome\Widgets\ClockWidget\obj\Debug\Clock_MarkupCompile.cache
+C:\Users\media\source\repos\HTCHome\Widgets\ClockWidget\obj\Debug\Clock.g.resources
+C:\Users\media\source\repos\HTCHome\Widgets\ClockWidget\obj\Debug\ClockWidget.Properties.Resources.resources
+C:\Users\media\source\repos\HTCHome\Widgets\ClockWidget\obj\Debug\ClockWidget.csproj.GenerateResource.cache
+C:\Users\media\source\repos\HTCHome\Widgets\ClockWidget\obj\Debug\ClockWidget.csproj.CoreCompileInputs.cache
+C:\Users\media\source\repos\HTCHome\Widgets\ClockWidget\obj\Debug\ClockWidget.csproj.CopyComplete
+C:\Users\media\source\repos\HTCHome\Widgets\ClockWidget\obj\Debug\Clock.dll
+C:\Users\media\source\repos\HTCHome\Widgets\ClockWidget\obj\Debug\Clock.pdb

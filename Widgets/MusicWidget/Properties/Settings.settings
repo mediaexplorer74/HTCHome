@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MediaPlayerWidget.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Controller" Type="System.String" Scope="User">
+      <Value Profile="(Default)">WMP</Value>
+    </Setting>
+    <Setting Name="Left" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">-100</Value>
+    </Setting>
+    <Setting Name="Top" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">-100</Value>
+    </Setting>
+    <Setting Name="Opacity" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="ScaleFactor" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="Skin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Sense</Value>
+    </Setting>
+    <Setting Name="TopMost" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Pinned" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
