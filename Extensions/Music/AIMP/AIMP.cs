@@ -148,11 +148,13 @@ namespace AIMP
         {
             CurrentMedia = new MediaInfo();
             string newValue = "";
-            string str2 = "";
-            string str3 = "";
-            string str4 = "";
-            string str5 = "";
-            string str6 = "";
+            
+            //string str2 = "";
+            //string str3 = "";
+            //string str4 = "";
+            //string str5 = "";
+            //string str6 = "";
+            
             IntPtr hFileMappingObject = OpenFileMapping(4, true, "AIMP2_RemoteInfo");
             IntPtr ptr = MapViewOfFile(hFileMappingObject, 4, 0, 0, 0x800);
             CurrentMedia.cbSizeOf = Marshal.ReadInt32(ptr);
@@ -184,7 +186,7 @@ namespace AIMP
                     str = str.Substring(CurrentMedia.nArtistLen);
                     CurrentMedia.sFileName = str.Substring(CurrentMedia.nDateLen, CurrentMedia.nFileNameLen);
                     str = str.Substring(CurrentMedia.nDateLen + CurrentMedia.nFileNameLen);
-                    str6 = str.Substring(0, CurrentMedia.nGenreLen);
+                    //str6 = str.Substring(0, CurrentMedia.nGenreLen);
                     //sInfo[4] = str6;
                     CurrentMedia.sTitle = str.Substring(CurrentMedia.nGenreLen).Substring(0, CurrentMedia.nTitleLen);
                     //sInfo[2] = str2;

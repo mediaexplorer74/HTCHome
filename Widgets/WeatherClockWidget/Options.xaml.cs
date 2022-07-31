@@ -33,7 +33,7 @@ namespace WeatherClockWidget
 
         private List<CityLocation> results = new List<CityLocation>();
 
-        private List<string> skins = new List<string>();
+        private readonly List<string> skins = new List<string>();
 
         int _selectedIndex = -1;
 
@@ -57,8 +57,16 @@ namespace WeatherClockWidget
                     //
                 }
 
-                if (_selectedIndex > -1 && _selectedIndex < SearchResults.Children.Count)
+                if 
+                (
+                    _selectedIndex > -1
+                    && 
+                    _selectedIndex < SearchResults.Children.Count
+                    )
+                {
                     ((LocationItem)SearchResults.Children[_selectedIndex]).Selected = false;
+                }
+                
                 _selectedIndex = value;
             }
         }
@@ -78,7 +86,8 @@ namespace WeatherClockWidget
             WinAPI.MARGINS margins = new WinAPI.MARGINS();
             margins.cyTopHeight = 24;
 
-            HwndSource.FromHwnd(handle).CompositionTarget.BackgroundColor = Color.FromArgb(0, 0, 0, 0);
+            HwndSource.FromHwnd(handle).CompositionTarget.BackgroundColor 
+                = Color.FromArgb(0, 0, 0, 0);
 
             WinAPI.ExtendGlassFrame(handle, ref margins);
 
@@ -179,7 +188,25 @@ namespace WeatherClockWidget
             {
                 foreach (WeatherProvider p in widget.providers)
                 {
-                    ProviderComboBox.Items.Add(p.Name);
+                    /*
+                    if (p.Name == "Microsoft.WindowsAPICodePack")
+                    {
+                        // Skip this technical dll!
+                    }
+                    else if (p.Name == "Microsoft.WindowsAPICodePack.Shell")
+                    {
+                        // Skip this technical dll!
+                    }
+                    else if (p.Name == "HTCHome.Core")
+                    {
+                        // Skip this technical dll!
+                    }
+                    else
+                    {
+                    */
+                        // Add the weather provider (use p.Name as Prov. Name)
+                        ProviderComboBox.Items.Add(p.Name);
+                    /*}*/
                 }
             }
 
@@ -221,50 +248,76 @@ namespace WeatherClockWidget
             }, null);
 
             List<CityLocation> locations = widget.currentProvider.GetLocation(l);
+            
             if (locations != null && locations.Count > 0)
             {
                 foreach (CityLocation location in locations)
                 {
-                    SearchResults.Dispatcher.Invoke((Action)delegate
-                                                                 {
-                                                                     LocationItem item = new LocationItem();
-                                                                     item.Header = location.City;
-                                                                     item.Order = SearchResults.Children.Count;
-                                                                     item.MouseLeftButtonDown +=
-                                                                         new MouseButtonEventHandler(
-                                                                             item_MouseLeftButtonDown);
-                                                                     SearchResults.Children.Add(item);
-                                                                 }, null);
+                    SearchResults.Dispatcher.Invoke
+                    (
+                        (Action)delegate
+                        {
+                            LocationItem item = new LocationItem();
+                            item.Header = location.City;
+                            item.Order = SearchResults.Children.Count;
+                            item.MouseLeftButtonDown +=
+                                new MouseButtonEventHandler(
+                                    item_MouseLeftButtonDown);
+                            SearchResults.Children.Add(item);
+                        }, 
+                        null
+                    );
+
                     results.Add(location);
                 }
             }
             else
             {
-                SearchResults.Dispatcher.Invoke((Action)delegate
-                                             {
-                                                 LocationItem item = new LocationItem();
-                                                 item.Header = Widget.LocaleManager.GetString("NoResults");
-                                                 item.IsEnabled = false;
-                                                 SearchResults.Children.Add(item);
-                                             }, null);
+                SearchResults.Dispatcher.Invoke
+                (
+                    (Action)delegate
+                    {
+                        LocationItem item = new LocationItem();
+                        item.Header = Widget.LocaleManager.GetString("NoResults");
+                        item.IsEnabled = false;
+                        SearchResults.Children.Add(item);
+                    }, 
+                    null
+                );
             }
 
-            SearchProgress.Dispatcher.Invoke((Action)delegate
-            {
-                SearchProgress.Visibility = System.Windows.Visibility.Hidden;
-            }, null);
+            SearchProgress.Dispatcher.Invoke
+            (
+                (Action)delegate
+                {
+                    SearchProgress.Visibility = System.Windows.Visibility.Hidden;
+                }, 
+                null
+            );
         }
 
         void item_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.SelectedIndex = SearchResults.Children.IndexOf((LocationItem)sender);
+
             if (Properties.Settings.Default.LastCities == null)
-                Properties.Settings.Default.LastCities = new StringCollection();
-            if (!Properties.Settings.Default.LastCities.Contains(results[SelectedIndex].City + "#" + results[SelectedIndex].Code))
             {
-                Properties.Settings.Default.LastCities.Insert(0, results[SelectedIndex].City + "#" + results[SelectedIndex].Code);
+                Properties.Settings.Default.LastCities = new StringCollection();
+            }
+            
+            if (!Properties.Settings.Default.LastCities.Contains(
+                results[SelectedIndex].City + "#" + results[SelectedIndex].Code))
+            {
+                Properties.Settings.Default.LastCities.Insert(
+                    0, results[SelectedIndex].City + "#" + results[SelectedIndex].Code);
+
                 if (Properties.Settings.Default.LastCities.Count > 10)
-                    Properties.Settings.Default.LastCities.RemoveAt(Properties.Settings.Default.LastCities.Count - 1);
+                {
+                    Properties.Settings.Default.LastCities.RemoveAt
+                    (
+                        Properties.Settings.Default.LastCities.Count - 1
+                    );
+                }
             }
         }
 
@@ -287,6 +340,7 @@ namespace WeatherClockWidget
         {
             if (ApplyButton.IsEnabled)
             {
+                // Apply settings
                 ApplySettings();
             }
 
@@ -298,9 +352,11 @@ namespace WeatherClockWidget
             this.Close();
         }
 
+        // Apply settings
         private void ApplyButton_Click(object sender, RoutedEventArgs e)
         {
             ApplySettings();
+
             ApplyButton.IsEnabled = false;
         }
 
@@ -317,6 +373,8 @@ namespace WeatherClockWidget
             thread.Start();
         }
 
+
+        // ApplySettings
         private void ApplySettings()
         {
             if (Properties.Settings.Default.WeatherProvider != ProviderComboBox.Text && Properties.Settings.Default.LastCities!= null)
@@ -354,16 +412,21 @@ namespace WeatherClockWidget
                 {
                     if (!p.IsLoaded)
                         p.Load();
+
                     widget.currentProvider = p;
                 }
             }
 
             Properties.Settings.Default.Save();
+
             widget.UpdateSettings();
 
             ProviderChangedTextBlock.Visibility = System.Windows.Visibility.Collapsed;
-        }
+        
+        }//ApplySettings
 
+
+        // SkinsComboBox_SelectionChanged
         private void SkinsComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             XDocument doc = XDocument.Load(E.Path + "\\WeatherClock\\Skins\\" + skins[SkinsComboBox.SelectedIndex] + "\\Skin.xml");

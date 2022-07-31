@@ -156,7 +156,9 @@ namespace Gismeteo
                 Int32 cloud = 0;
                 Int32 precipType = 0; //0 -дождь, 2 - снег
                 Int32 precipitation = 0;
-                Boolean ts = false;
+                
+                //Boolean ts = false;
+
                 if (iconRe.IsMatch(icon))
                 {
                     isDay = iconRe.Match(icon).Groups[2].Value.ToLower() == "d";

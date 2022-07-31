@@ -22,6 +22,7 @@ using System.Threading;
 using WeatherClockWidget.WeatherAnimation;
 using System.Windows.Media.Animation;
 using System.Xml.Linq;
+using System.Diagnostics;
 
 namespace WeatherClockWidget
 {
@@ -690,18 +691,45 @@ namespace WeatherClockWidget
 
         private void GetWeatherReport()
         {
-            WeatherReport temp;
+            WeatherReport temp = null;
             if (Properties.Settings.Default.LocationCode != string.Empty)
             {
-                temp = currentProvider.GetWeatherReport(E.Locale, Properties.Settings.Default.LocationCode, Properties.Settings.Default.DegreeType);
+                try
+                {
+                    temp =
+                        currentProvider.GetWeatherReport
+                        (
+                            E.Locale, 
+                            Properties.Settings.Default.LocationCode,
+                            Properties.Settings.Default.DegreeType
+                        );
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine("currentProvider.GetWeatherReport (loc. code) Exception: " + ex.Message);
+                }
             }
             else
             {
-                temp = currentProvider.GetWeatherReport(E.Locale, string.Empty, Properties.Settings.Default.DegreeType);
+                try
+                {
+                    temp = currentProvider.GetWeatherReport
+                        (
+                            E.Locale, 
+                            string.Empty, 
+                            Properties.Settings.Default.DegreeType
+                        );
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine("currentProvider.GetWeatherReport (Empty loc. code) Exception: " + ex.Message);
+                }
             }
 
             if (temp != null)
+            {
                 weatherReport = temp;
+            }
 
         }
 
@@ -859,7 +887,14 @@ namespace WeatherClockWidget
                 options.FlowDirection = FlowDirection.LeftToRight;
             }
 
-            options.ShowDialog();
+            try
+            {
+                options.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("WeatherClock Options ShowDialog Exception: " + ex.Message);
+            }
         }
 
         private void UserControl_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

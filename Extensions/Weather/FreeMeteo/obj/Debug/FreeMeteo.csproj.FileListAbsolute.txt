@@ -2,6 +2,5 @@ C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\FreeMeteo.dll
 C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\FreeMeteo.pdb
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\FreeMeteo\obj\Debug\FreeMeteo.csproj.AssemblyReference.cache
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\FreeMeteo\obj\Debug\FreeMeteo.csproj.CoreCompileInputs.cache
-C:\Users\media\source\repos\HTCHome\Extensions\Weather\FreeMeteo\obj\Debug\FreeMeteo.csproj.CopyComplete
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\FreeMeteo\obj\Debug\FreeMeteo.dll
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\FreeMeteo\obj\Debug\FreeMeteo.pdb

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WeatherReport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<WeatherReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <High>0</High>
   <Location>New York</Location>
   <Low>0</Low>

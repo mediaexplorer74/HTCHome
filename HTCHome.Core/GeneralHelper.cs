@@ -8,7 +8,10 @@ namespace HTCHome.Core
     public static class GeneralHelper
     {
         public static WebProxy Proxy;
+        
         /// <exception cref = "ArgumentNullException">Argument is null.</exception>
+        
+        //GetXml
         public static string GetXml(string url)
         {
             if (string.IsNullOrEmpty(url))
@@ -29,18 +32,32 @@ namespace HTCHome.Core
 
             try
             {
-                //тупо, но пока ничего лучше в голову не пришло
+                //create stream reader as data src from url
                 StreamReader reader = new StreamReader(webClient.OpenRead(url));
-                string line = reader.ReadLine(); //read the first line with encoding name
+
+                //read the first line with encoding name
+                string line = reader.ReadLine(); 
+                
+                
                 if (line.Contains("encoding"))
                 {
-                    string encoding = line.Substring(line.IndexOf("encoding") + 10); //parse encoding name from the first line of xml
+                    //parse encoding name from the first line of xml
+                    string encoding = line.Substring(line.IndexOf("encoding") + 10); 
+                    
                     encoding = encoding.Substring(0, encoding.IndexOf('"'));
+                    
                     reader.Close();
 
-                    reader = new StreamReader(webClient.OpenRead(url), Encoding.GetEncoding(encoding)); //reopen stream with right encoding
+                    // Re-eopen stream with right encoding...
+                    reader = new StreamReader
+                        (
+                            webClient.OpenRead(url), 
+                            Encoding.GetEncoding(encoding)
+                        ); 
+
                     line = "";
                 }
+
                 return line + reader.ReadToEnd();
             }
             catch (Exception ex)

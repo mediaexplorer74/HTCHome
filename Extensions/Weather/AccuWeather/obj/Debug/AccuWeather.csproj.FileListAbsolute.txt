@@ -198,10 +198,6 @@ C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\bin\Debug\Res
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\bin\Debug\Resources\am.png
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\bin\Debug\AccuWeather.dll
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\bin\Debug\AccuWeather.pdb
-C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\bin\Debug\Argotic.Common.dll
-C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\bin\Debug\Argotic.Core.dll
-C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\bin\Debug\Argotic.Extensions.dll
-C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\bin\Debug\Argotic.Web.dll
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\bin\Debug\HTCHome.Core.dll
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\bin\Debug\WeatherClock.dll
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll

@@ -2,6 +2,5 @@ C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\WeatherChannel.
 C:\Users\media\source\repos\HTCHome\bin\Debug\Extensions\Weather\WeatherChannel.pdb
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\WeatherChannel\obj\Debug\WeatherChannel.csproj.AssemblyReference.cache
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\WeatherChannel\obj\Debug\WeatherChannel.csproj.CoreCompileInputs.cache
-C:\Users\media\source\repos\HTCHome\Extensions\Weather\WeatherChannel\obj\Debug\WeatherChannel.csproj.CopyComplete
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\WeatherChannel\obj\Debug\WeatherChannel.dll
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\WeatherChannel\obj\Debug\WeatherChannel.pdb

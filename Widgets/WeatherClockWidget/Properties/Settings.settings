@@ -57,7 +57,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="WeatherProvider" Type="System.String" Scope="User">
-      <Value Profile="(Default)">MSN</Value>
+      <Value Profile="(Default)">OpenWeatherMap</Value>
     </Setting>
     <Setting Name="EnableWeather" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>

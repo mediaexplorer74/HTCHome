@@ -18,6 +18,5 @@ C:\Users\media\source\repos\HTCHome\Widgets\PhotoWidget\obj\Debug\Photo.g.resour
 C:\Users\media\source\repos\HTCHome\Widgets\PhotoWidget\obj\Debug\PhotoWidget.Properties.Resources.resources
 C:\Users\media\source\repos\HTCHome\Widgets\PhotoWidget\obj\Debug\PhotoWidget.csproj.GenerateResource.cache
 C:\Users\media\source\repos\HTCHome\Widgets\PhotoWidget\obj\Debug\PhotoWidget.csproj.CoreCompileInputs.cache
-C:\Users\media\source\repos\HTCHome\Widgets\PhotoWidget\obj\Debug\PhotoWidget.csproj.CopyComplete
 C:\Users\media\source\repos\HTCHome\Widgets\PhotoWidget\obj\Debug\Photo.dll
 C:\Users\media\source\repos\HTCHome\Widgets\PhotoWidget\obj\Debug\Photo.pdb

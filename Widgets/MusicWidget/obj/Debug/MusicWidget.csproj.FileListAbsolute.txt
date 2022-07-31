@@ -91,6 +91,5 @@ C:\Users\media\source\repos\HTCHome\Widgets\MusicWidget\obj\Debug\Music.g.resour
 C:\Users\media\source\repos\HTCHome\Widgets\MusicWidget\obj\Debug\MediaPlayerWidget.Properties.Resources.resources
 C:\Users\media\source\repos\HTCHome\Widgets\MusicWidget\obj\Debug\MusicWidget.csproj.GenerateResource.cache
 C:\Users\media\source\repos\HTCHome\Widgets\MusicWidget\obj\Debug\MusicWidget.csproj.CoreCompileInputs.cache
-C:\Users\media\source\repos\HTCHome\Widgets\MusicWidget\obj\Debug\MusicWidget.csproj.CopyComplete
 C:\Users\media\source\repos\HTCHome\Widgets\MusicWidget\obj\Debug\Music.dll
 C:\Users\media\source\repos\HTCHome\Widgets\MusicWidget\obj\Debug\Music.pdb

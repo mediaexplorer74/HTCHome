@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Users\media\source\repos\mediaexplorer74\HTCHome\Widgets\NewsWidget\obj\Debug\
+C:\Users\media\source\repos\HTCHome\Widgets\NewsWidget\obj\Debug\
 NewsWidget
 none
 false
@@ -12,8 +12,8 @@ DEBUG;TRACE
 
 4-1499805285
 6-1999707053
-14-1938796817
-191786285689
+13434392358
+15-1951559561
 News.xaml;NewsItem.xaml;Options.xaml;SourceItem.xaml;
 
 True

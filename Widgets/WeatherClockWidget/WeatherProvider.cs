@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 
@@ -47,21 +48,34 @@ namespace WeatherClockWidget
             }
             catch (Exception ex)
             {
+                Debug.WriteLine("Can't find location.\n" + ex.Message);
                 HTCHome.Core.Logger.Log("Can't find location.\n" + ex.ToString());
                 return null;
             }
         }
 
-        public WeatherReport GetWeatherReport(string locale, string locationcode, int degreeType)
+        public WeatherReport GetWeatherReport
+        (
+            string locale, 
+            string locationcode, 
+            int degreeType
+        )
         {
             try
             {
-                var weatherReport = _provider.GetWeatherReport(locale, locationcode, degreeType);
+                var weatherReport = _provider.GetWeatherReport
+                    (locale, 
+                    locationcode, 
+                    degreeType);
                 return weatherReport;
             }
             catch (Exception ex)
             {
-                HTCHome.Core.Logger.Log("Can't get weather report.\n" + ex.ToString());
+                Debug.WriteLine("WeatherWidgetClock - GetWeatherReport Exception: " 
+                    + ex.Message);
+
+                HTCHome.Core.Logger.Log("Can't get weather report.\n"
+                    + ex.ToString());
             }
             return null;
         }

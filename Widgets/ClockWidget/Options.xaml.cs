@@ -17,6 +17,7 @@ using System.Threading;
 using E = HTCHome.Core.Environment;
 using System.IO;
 using System.Xml.Linq;
+using System.Diagnostics;
 
 namespace ClockWidget
 {
@@ -32,7 +33,7 @@ namespace ClockWidget
 
         int _selectedIndex = -1;
 
-        
+                
         public Options()
         {
             InitializeComponent();
@@ -42,8 +43,10 @@ namespace ClockWidget
         {
             handle = new WindowInteropHelper(this).Handle;
 
-            WinAPI.MARGINS margins = new WinAPI.MARGINS();
-            margins.cyTopHeight = 24;
+            WinAPI.MARGINS margins = new WinAPI.MARGINS
+            {
+                cyTopHeight = 24
+            };
 
             HwndSource.FromHwnd(handle).CompositionTarget.BackgroundColor = Color.FromArgb(0, 0, 0, 0);
 
@@ -76,8 +79,10 @@ namespace ClockWidget
             {
                 XDocument doc = XDocument.Load(d + "\\Skin.xml");
 
-                ComboBoxItem item = new ComboBoxItem();
-                item.Content = doc.Root.Element("Name").Value;
+                ComboBoxItem item = new ComboBoxItem
+                {
+                    Content = doc.Root.Element("Name").Value
+                };
                 SkinsComboBox.Items.Add(item);
                 skins.Add(new DirectoryInfo(d).Name);
             }

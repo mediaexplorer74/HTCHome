@@ -23,7 +23,7 @@ namespace CalendarWidget
 
         public System.Windows.Controls.UserControl Load()
         {
- LocaleManager = new HTCHome.Core.LocaleManager(E.Path + "\\Calendar\\Localization");
+            LocaleManager = new HTCHome.Core.LocaleManager(E.Path + "\\Calendar\\Localization");
             LocaleManager.LoadLocale(E.Locale);
             _widgetControl = new Calendar();
             return _widgetControl;

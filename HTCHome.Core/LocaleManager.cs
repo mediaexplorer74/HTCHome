@@ -1,4 +1,6 @@
-﻿using System;
+﻿// LocaleManager
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +11,7 @@ namespace HTCHome.Core
 {
     public class LocaleManager
     {
-        private ResourceDictionary locale;
+        private readonly ResourceDictionary locale;
 
         public string LocaleCode
         {
@@ -29,10 +31,14 @@ namespace HTCHome.Core
             LocaleBasePath = localeBasePath;
         }
 
+        
+        //LoadLocale
         public void LoadLocale(string localeCode)
         {
             LocaleCode = localeCode;
+
             if (File.Exists(LocaleBasePath + "\\" + LocaleCode + ".xaml"))
+            {
                 try
                 {
                     locale.Source = new Uri(LocaleBasePath + "\\" + LocaleCode + ".xaml");
@@ -42,10 +48,16 @@ namespace HTCHome.Core
                     HTCHome.Core.Logger.Log("Can't load locale " + localeCode + ". Exception: " + ex.ToString());
                     locale.Source = new Uri(LocaleBasePath + "\\en-US.xaml");
                 }
+            }
             else
+            {
                 locale.Source = new Uri(LocaleBasePath + "\\en-US.xaml");
-        }
+            }
 
+        }//LoadLocale
+
+
+        // GetLocaleName
         public static string GetLocaleName(string path)
         {
             var l = new ResourceDictionary();
@@ -60,8 +72,11 @@ namespace HTCHome.Core
                 Logger.Log("Localization " + path + " is broken.\n" + ex.ToString());
             }
             return String.Empty;
-        }
+        
+        }//GetLocaleName
 
+
+        // GetLocaleCode
         public static string GetLocaleCode(string path)
         {
             var l = new ResourceDictionary();

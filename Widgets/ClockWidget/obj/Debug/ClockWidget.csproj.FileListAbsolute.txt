@@ -54,6 +54,5 @@ C:\Users\media\source\repos\HTCHome\Widgets\ClockWidget\obj\Debug\Clock.g.resour
 C:\Users\media\source\repos\HTCHome\Widgets\ClockWidget\obj\Debug\ClockWidget.Properties.Resources.resources
 C:\Users\media\source\repos\HTCHome\Widgets\ClockWidget\obj\Debug\ClockWidget.csproj.GenerateResource.cache
 C:\Users\media\source\repos\HTCHome\Widgets\ClockWidget\obj\Debug\ClockWidget.csproj.CoreCompileInputs.cache
-C:\Users\media\source\repos\HTCHome\Widgets\ClockWidget\obj\Debug\ClockWidget.csproj.CopyComplete
 C:\Users\media\source\repos\HTCHome\Widgets\ClockWidget\obj\Debug\Clock.dll
 C:\Users\media\source\repos\HTCHome\Widgets\ClockWidget\obj\Debug\Clock.pdb
