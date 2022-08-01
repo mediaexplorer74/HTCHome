@@ -55,6 +55,7 @@ namespace WeatherClockWidget
             Initialize();
         }
 
+        // Initialize
         private void Initialize()
         {
             if (!File.Exists(E.Path + "\\WeatherClock\\Skins\\" + Properties.Settings.Default.Skin + "\\Layout.xaml"))
@@ -80,7 +81,8 @@ namespace WeatherClockWidget
             Minutes.Initialize(d.Minute);
 
             Skin.Source = new Uri(E.Path + "\\WeatherClock\\Skins\\" + Properties.Settings.Default.Skin + "\\Layout.xaml");
-        }
+        
+        }//Initialize
 
         public void ReloadSkin()
         {
@@ -168,8 +170,11 @@ namespace WeatherClockWidget
             Minutes.Initialize(DateTime.Now.Minute);
 
             Widget.Instance.UpdateAero(this);
-        }
+        
+        }//ReloadSkin
 
+
+        // Load
         public void Load()
         {
             weatherReport = WeatherReport.Read(E.Path + "\\WeatherClock\\Weather.data");
@@ -373,7 +378,10 @@ namespace WeatherClockWidget
 
             _wallpaperManager = new WallpaperManager();
             if (string.IsNullOrEmpty(Properties.Settings.Default.WallpapersFolder))
+            {
                 Properties.Settings.Default.WallpapersFolder = E.Root + "\\Wallpapers";
+            }
+
             _wallpaperManager.Scan(Properties.Settings.Default.WallpapersFolder);
 
             mediaPlayer = new MediaPlayer();
@@ -397,9 +405,14 @@ namespace WeatherClockWidget
                 }
             }
             else
+            {
                 lastCitiesItem.IsEnabled = false;
-        }
+            }
 
+        }//ContextMenu_Opened
+
+
+        // subItem_Click
         void subItem_Click(object sender, RoutedEventArgs e)
         {
             int index = lastCitiesItem.Items.IndexOf(sender);
@@ -536,27 +549,54 @@ namespace WeatherClockWidget
             weatherTimer_Tick(null, EventArgs.Empty);
         }
 
+        // GetWeatherProviders
         private void GetWeatherProviders()
         {
             if (Directory.Exists(E.ExtensionsPath + "\\Weather"))
             {
                 providers = new List<WeatherProvider>();
+
                 var files = from x in Directory.GetFiles(E.ExtensionsPath + "\\Weather")
                             where x.EndsWith(".dll")
                             select x;
+
                 foreach (var f in files)
                 {
-                    var p = new WeatherProvider(f);
-                    providers.Add(p);
-                    if (Properties.Settings.Default.WeatherProvider == p.Name)
+                    WeatherProvider p = new WeatherProvider(f);
+
+                    if (p.Name == "Microsoft.WindowsAPICodePack")
+                    { 
+                        // skip 
+                    }
+                    else if (p.Name == "Microsoft.WindowsAPICodePack.Shell")
                     {
-                        currentProvider = p;
-                        p.Load();
+                        // skip 
+                    }
+                    else if (p.Name == "HTCHome.Core")
+                    {
+                        // skip 
+                    }
+                    else
+                    {
+                        // add weather provider to list
+                        providers.Add(p);
+
+                        // check if default weather provider (w. p.)
+                        if (Properties.Settings.Default.WeatherProvider == p.Name)
+                        {
+                            // set default w. p.
+                            currentProvider = p;
+                            p.Load();
+                        }
                     }
                 }
-            }
-        }
+            }//if...
 
+        }//GetWeatherProviders
+
+
+
+        // UpdateSettings
         public void UpdateSettings()
         {
             Scale.ScaleX = Properties.Settings.Default.ScaleFactor;
@@ -565,15 +605,21 @@ namespace WeatherClockWidget
             if (Convert.ToBoolean(Properties.Settings.Default.TimeMode) != Hours.ShowAmPm)
                 FirstFlip();
             ForecastGrid.Visibility = Properties.Settings.Default.ShowForecast ? Visibility.Visible : Visibility.Collapsed;
+
             if (E.Locale != Widget.LocaleManager.LocaleCode)
+            {
                 Widget.LocaleManager.LoadLocale(E.Locale);
+            }
 
             if (System.IO.Path.GetFileNameWithoutExtension(System.IO.Path.GetDirectoryName(Skin.Source.AbsolutePath)) != Properties.Settings.Default.Skin)
             {
                 ReloadSkin();
             }
-        }
 
+        }//UpdateSettings
+
+
+        // timer_Tick
         private void timer_Tick(object sender, EventArgs e)
         {
             if (!firstFlip)

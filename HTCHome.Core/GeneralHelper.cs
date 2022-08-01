@@ -2,6 +2,7 @@ using System;
 using System.Net;
 using System.Text;
 using System.IO;
+using System.Diagnostics;
 
 namespace HTCHome.Core
 {
@@ -62,6 +63,7 @@ namespace HTCHome.Core
             }
             catch (Exception ex)
             {
+                Debug.WriteLine("! HTC.Core - GeneralHelper - GetXml Exception : " + ex.Message);
                 HTCHome.Core.Logger.Log(ex.ToString());
                 return String.Empty;
             }

@@ -23,10 +23,10 @@ namespace OpenWeatherMap
         private const string RequestForLocation = "https://api.openweathermap.org/data/2.5/weather?q={0}&appid=e60a227a4667049d23504904815bdd54";
 
         // Request of location (by City name and Metric measure unit)
-        private const string RequestForCelsius = "https://api.openweathermap.org/data/2.5/weather?q={0}&lang={1}&units=metric&appid=e60a227a4667049d23504904815bdd54";
+        private const string RequestForCelsius = "https://api.openweathermap.org/data/2.5/weather?q={1}&mode=xml&lang={0}&units=metric&appid=e60a227a4667049d23504904815bdd54";
 
         // Request of location (by City name and Imperial measure unit)
-        private const string RequestForFahrenheit = "https://api.openweathermap.org/data/2.5/weather?q={0}&lang={1}&units=imperial&appid=e60a227a4667049d23504904815bdd54";
+        private const string RequestForFahrenheit = "https://api.openweathermap.org/data/2.5/weather?q={1}&mode=xml&lang={0}&units=imperial&appid=e60a227a4667049d23504904815bdd54";
         
         
         // GetCoordinates
@@ -115,18 +115,22 @@ namespace OpenWeatherMap
 
         WeatherReport IWeatherProvider.GetWeatherReport(string locale, string locationcode, int degreeType)
         {
-            //if (locale == "ru-RU")
-            //{
-            //    locale = "ru";
-            //}
+            string localecode = "en";
+            if (locale == "ru-RU")
+            {
+                localecode = "ru";
+            }
 
             //if (locale == "en-US")
             //{
-            //    locale = "en";
+            //    localecode = "en";
             //}
 
+            // TEMP, RnD Only
+            locationcode = "London";
 
-            string url = string.Format(degreeType == 0 ? RequestForCelsius : RequestForFahrenheit, locale, locationcode);
+
+            string url = string.Format(degreeType == 0 ? RequestForCelsius : RequestForFahrenheit, localecode, locationcode);
 
             string s = GeneralHelper.GetXml(url);
 
@@ -148,6 +152,8 @@ namespace OpenWeatherMap
 
                 WeatherReport result = new WeatherReport();
 
+
+                // TODO: Fix it via right parsing ! Use CompleteWeathereApp code
                 var currentWeather =
                     (
                     from x in doc.Descendants("weather")
@@ -201,7 +207,8 @@ namespace OpenWeatherMap
             {
                 return null;
             }
-        }
+
+        }//GetWeatherReport
 
         public static int GetWeatherPic(int skycode, int sunrise, int sunset)
         {
