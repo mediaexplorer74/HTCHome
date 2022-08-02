@@ -398,7 +398,7 @@ namespace WeatherClockWidget
                 foreach (string city in Properties.Settings.Default.LastCities)
                 {
                     var subItem = new MenuItem();
-                    string c = city.Split(new string[] { "#" }, StringSplitOptions.RemoveEmptyEntries)[0];
+                    string c = city;//.Split(new string[] { "#" }, StringSplitOptions.RemoveEmptyEntries)[0];
                     subItem.Header = c;
                     subItem.Click += new RoutedEventHandler(subItem_Click);
                     lastCitiesItem.Items.Add(subItem);
@@ -418,8 +418,11 @@ namespace WeatherClockWidget
             int index = lastCitiesItem.Items.IndexOf(sender);
             if (index > -1)
             {
-                string c = Properties.Settings.Default.LastCities[index].Split(new string[] { "#" }, StringSplitOptions.RemoveEmptyEntries)[1];
-                Properties.Settings.Default.LocationCode = c;
+                string c = Properties.Settings.Default.LastCities[index];//.Split(new string[] { "#" }, StringSplitOptions.RemoveEmptyEntries)[1];
+
+                Properties.Settings.Default.LocationCode = c;// Properties.Settings.Default.LastCities[index]; //code
+
+
                 refreshItem_Click(sender, e);
                 //MessageBox.Show(Widget.Sett.LastCities[index].City);
             }
@@ -572,7 +575,7 @@ namespace WeatherClockWidget
                     {
                         // skip 
                     }
-                    else if (p.Name == "HTCHome.Core")
+                    else if ((p.Name == "HTCHome.Core") || (p.Name == "Newtonsoft.Json")) 
                     {
                         // skip 
                     }
@@ -726,6 +729,7 @@ namespace WeatherClockWidget
 
                 if (weatherReport != null)
                     WeatherPanel.Dispatcher.Invoke((Action)UpdateWeatherData, null);
+
                 ForecastPanel.Dispatcher.Invoke((Action)UpdateForecastData, null);
             }
             catch (Exception ex)

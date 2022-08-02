@@ -1,6 +1,8 @@
 ﻿// OpenWeatherMap
-// https://api.openweathermap.org/data/2.5/weather?q=Londona&lang=en&appid=e60a227a4667049d23504904815bdd54
+// https://api.openweathermap.org/data/2.5/weather?q=London&lang=en&appid=e60a227a4667049d23504904815bdd54
 // https://api.openweathermap.org/data/2.5/weather?q=Samara&lang=ru&appid=e60a227a4667049d23504904815bdd54
+// https://api.openweathermap.org/data/2.5/forecast?q=Moscow&exclude=current,minutely,hourly,alerts&appid=e60a227a4667049d23504904815bdd54&units=metric&lang=ru&mode=xml&cnt=5
+
 
 using System;
 using System.Collections.Generic;
@@ -14,13 +16,15 @@ using HTCHome.Core;
 
 using WeatherClockWidget;
 using WeatherClockWidget.Domain;
+using OpenWeatherMap.Models;
+using Newtonsoft.Json;
 
 namespace OpenWeatherMap
 {
     public class Weather : IWeatherProvider
     {
         // Request of location (by City name)
-        private const string RequestForLocation = "https://api.openweathermap.org/data/2.5/weather?q={0}&appid=e60a227a4667049d23504904815bdd54";
+        private const string RequestForLocation = "https://api.openweathermap.org/data/2.5/weather?q={0}&mode=xml&appid=e60a227a4667049d23504904815bdd54";
 
         // Request of location (by City name and Metric measure unit)
         private const string RequestForCelsius = "https://api.openweathermap.org/data/2.5/weather?q={1}&mode=xml&lang={0}&units=metric&appid=e60a227a4667049d23504904815bdd54";
@@ -58,14 +62,14 @@ namespace OpenWeatherMap
         {
             CityLocation l = new CityLocation();
 
-            List<CityLocation> result = new List<CityLocation>()
-            { new CityLocation { City = "London", Code = "Paris" } };
+            List<CityLocation> result = new List<CityLocation>();
+            //{ new CityLocation { City = "London", Code = "Paris" } };
 
             //TEMP: RnD only.
-            return result;
+            //return result;
 
-            //string ns = string.Format(RequestForLocation, s);
-            var ns = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=e60a227a4667049d23504904815bdd54";
+            string ns = string.Format(RequestForLocation, s);
+            //string ns = "https://api.openweathermap.org/data/2.5/weather?q={s}&appid=e60a227a4667049d23504904815bdd54&mode=xml";
 
             XmlTextReader reader = null;
 
@@ -87,11 +91,11 @@ namespace OpenWeatherMap
                     {
                         try
                         {
-                            if (reader.NodeType == XmlNodeType.Element && reader.Name.Equals("weather"))
+                            if (reader.NodeType == XmlNodeType.Element && reader.Name.Equals("city"))
                             {
-                                reader.MoveToAttribute("weatherlocationname");
+                                reader.MoveToAttribute("name");
                                 l.City = reader.Value;
-                                reader.MoveToAttribute("weatherlocationcode");
+                                reader.MoveToAttribute("id");
                                 l.Code = reader.Value;
 
                                 result.Add(l);
@@ -127,7 +131,7 @@ namespace OpenWeatherMap
             //}
 
             // TEMP, RnD Only
-            locationcode = "London";
+            //locationcode = "London";
 
 
             string url = string.Format(degreeType == 0 ? RequestForCelsius : RequestForFahrenheit, localecode, locationcode);
@@ -154,7 +158,7 @@ namespace OpenWeatherMap
 
 
                 // TODO: Fix it via right parsing ! Use CompleteWeathereApp code
-                var currentWeather =
+                /*var currentWeather =
                     (
                     from x in doc.Descendants("weather")
                     let xElement = x.Element("current")
@@ -166,17 +170,31 @@ namespace OpenWeatherMap
                             skycode = xElement.Attribute("skycode").Value
                         }
                     ).FirstOrDefault();
+                */
+
+                var currentWeather =
+                    (
+                    from x in doc.Descendants("current")
+                    let xElement = x.Element("temperature")
+                    select
+                        new
+                        {
+                            temp = xElement.Attribute("value").Value,
+                            text = xElement.Attribute("unit").Value,
+                            skycode = xElement.Attribute("max").Value
+                        }
+                    ).FirstOrDefault();
 
 
                 if (currentWeather != null)
-                {
-                    result.NowTemp = Convert.ToInt32(currentWeather.temp);
+                {                    
+                    result.NowTemp = Convert.ToInt32(Math.Round(Convert.ToDouble(currentWeather.temp.Replace(".", ",")), 0));
                     result.NowSky = currentWeather.text;
-                    result.NowSkyCode = GetWeatherPic(Convert.ToInt32(currentWeather.skycode), 4, 22);
+                    result.NowSkyCode = GetWeatherPic(Convert.ToInt32(Math.Round(Convert.ToDouble(currentWeather.skycode.Replace(".",",")))), 4, 22);
                 }
 
 
-                result.Location = doc.Descendants("weather").FirstOrDefault().Attribute("weatherlocationname").Value;
+                result.Location = doc.Descendants("city").FirstOrDefault().Attribute("name").Value;
 
                 //parse forecast
                 var days = from x in doc.Descendants("forecast")
@@ -210,6 +228,8 @@ namespace OpenWeatherMap
 
         }//GetWeatherReport
 
+
+        // GetWeatherPic
         public static int GetWeatherPic(int skycode, int sunrise, int sunset)
         {
             switch (skycode)
@@ -304,7 +324,10 @@ namespace OpenWeatherMap
                         return 33;
                     else
                         return 1;
-            }
-        }
-    }
-}
+            }//switch
+
+        }//GetWeatherPic
+
+    }//class end
+
+}//namespace end

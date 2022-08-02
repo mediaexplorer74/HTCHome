@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WeatherReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <High>0</High>
-  <Location>New York</Location>
+  <Location>Москва</Location>
   <Low>0</Low>
-  <NowSkyCode>1</NowSkyCode>
-  <NowTemp>0</NowTemp>
+  <NowSky>celsius</NowSky>
+  <NowSkyCode>37</NowSkyCode>
+  <NowTemp>18</NowTemp>
   <Forecast />
 </WeatherReport>

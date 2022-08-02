@@ -42,13 +42,13 @@ namespace WeatherClockWidget
             get { return _selectedIndex; }
             set
             {
-                if (value == _selectedIndex)
-                    return;
+                //if (value == _selectedIndex)
+                //    return;
 
                 if (value > -1)
                 {
                     ((LocationItem)SearchResults.Children[value]).Selected = true;
-                    Properties.Settings.Default.LocationCode = results[value].Code;
+                    Properties.Settings.Default.LocationCode = results[value].City;//.Code;
                     widget.weatherTimer_Tick(null, EventArgs.Empty);
 
                 }
@@ -304,12 +304,19 @@ namespace WeatherClockWidget
             {
                 Properties.Settings.Default.LastCities = new StringCollection();
             }
-            
-            if (!Properties.Settings.Default.LastCities.Contains(
-                results[SelectedIndex].City + "#" + results[SelectedIndex].Code))
+
+
+            // RnD
+            LocationText.Text = results[SelectedIndex].City;
+
+            if (!Properties.Settings.Default.LastCities.Contains
+                (results[SelectedIndex].City)// + "#" + results[SelectedIndex].Code)
+                ) 
             {
-                Properties.Settings.Default.LastCities.Insert(
-                    0, results[SelectedIndex].City + "#" + results[SelectedIndex].Code);
+                Properties.Settings.Default.LastCities.Insert
+                (
+                    0, results[SelectedIndex].City// + "#" + results[SelectedIndex].Code
+                );
 
                 if (Properties.Settings.Default.LastCities.Count > 10)
                 {
@@ -319,7 +326,7 @@ namespace WeatherClockWidget
                     );
                 }
             }
-        }
+        }//
 
         private void CheckBox_Click(object sender, RoutedEventArgs e)
         {

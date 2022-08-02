@@ -5,6 +5,9 @@ This is the part of my own Origami project (Adaptive/Live shell, Aura, Metro and
 
 Platform: Classic Desktop (not UWP)
 
+## Screenshots
+![screenshot1](Images/shot1.png)
+
 ## Status
 Work in sloooowly progress:
 - Little code refacotring / commenting

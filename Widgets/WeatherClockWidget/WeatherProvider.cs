@@ -57,15 +57,18 @@ namespace WeatherClockWidget
         public WeatherReport GetWeatherReport
         (
             string locale, 
-            string locationcode, 
+            string cityname,//locationcode, 
             int degreeType
         )
         {
+            // TEMP hack
+            //locationcode = "London";
+            //locale = "ru";
             try
             {
                 var weatherReport = _provider.GetWeatherReport
                     (locale, 
-                    locationcode, 
+                    cityname,//locationcode, 
                     degreeType);
                 return weatherReport;
             }
