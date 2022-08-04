@@ -120,6 +120,38 @@ namespace OpenWeatherMap
             return result;
         }
 
+
+        // Converts String to Int (trims leading . and ,)
+        public int SpecStrToInt(string s)
+        {
+
+            string NTemp;
+            char Ch1 = '.';
+            char Ch2 = ',';
+            int indexOfCh = 0;
+
+            indexOfCh = s.IndexOf(Ch1);
+
+            if (indexOfCh > 0)
+            {
+                NTemp = s.Substring(0, indexOfCh);
+            }
+            else
+            {
+                NTemp = s;
+            }
+
+
+            indexOfCh = NTemp.IndexOf(Ch2);
+
+            if (indexOfCh > 0)
+            {
+                NTemp = NTemp.Substring(0, indexOfCh);
+            }
+
+            int NT = Convert.ToInt32(NTemp);
+            return NT;
+        }
         WeatherReport IWeatherProvider.GetWeatherReport(string locale, string locationcode, int degreeType)
         {
             string localecode = "en";
@@ -127,7 +159,6 @@ namespace OpenWeatherMap
             {
                 localecode = "ru";
             }
-
 
 
             //string url = string.Format(degreeType == 0 ? CurrentForCelsius : CurrentForFahrenheit, localecode, locationcode);
@@ -151,38 +182,7 @@ namespace OpenWeatherMap
             { 
                 //parse current weather
 
-                WeatherReport result = new WeatherReport();
-
-
-                // TODO: Fix it via right parsing ! Use CompleteWeathereApp code
-                /*var currentWeather =
-                    (
-                    from x in doc.Descendants("weather")
-                    let xElement = x.Element("current")
-                    select
-                        new
-                        {
-                            temp = xElement.Attribute("temperature").Value,
-                            text = xElement.Attribute("skytext").Value,
-                            skycode = xElement.Attribute("skycode").Value
-                        }
-                    ).FirstOrDefault();
-                */
-
-                /*
-                var currentWeather =
-                    (
-                    from x in doc.Descendants("current")
-                    let xElement = x.Element("temperature")
-                    select
-                        new
-                        {
-                            temp = xElement.Attribute("value").Value,
-                            text = xElement.Attribute("unit").Value,
-                            skycode = xElement.Attribute("max").Value
-                        }
-                    ).FirstOrDefault();
-                */
+                WeatherReport result = new WeatherReport();                
 
                 var currentWeather1 =
                     (
@@ -222,42 +222,10 @@ namespace OpenWeatherMap
 
                 if (currentWeatherTemp != null)
                 {
-                    string NTemp;
+                    int NTemp = SpecStrToInt(currentWeatherTemp);                  
+                                       
 
-                    //if (localecode == "ru")
-                    //{
-                    //    NTemp = currentWeather.temp.Replace(".", ",");
-                    //}
-                    //else
-                    //{
-                    //    NTemp = currentWeather.temp;
-                    //}
-
-                    char Ch1 = '.';
-                    char Ch2 = ',';
-                    int indexOfCh = 0;
-
-                    indexOfCh = currentWeatherTemp.IndexOf(Ch1);
-
-                    if (indexOfCh > 0)
-                    {
-                        NTemp = currentWeatherTemp.Substring(0, indexOfCh);
-                    }
-                    else
-                    {
-                        NTemp = currentWeatherTemp;
-                    }
-
-                    
-                    indexOfCh = NTemp.IndexOf(Ch2);
-
-                    if (indexOfCh > 0)
-                    {
-                        NTemp = NTemp.Substring(0, indexOfCh);
-                    }
-                   
-
-                    result.NowTemp = Convert.ToInt32(NTemp);//(Math.Round(Convert.ToDouble(NTemp), 0));
+                    result.NowTemp = NTemp;//(Math.Round(Convert.ToDouble(NTemp), 0));
                     result.NowSky = currentWeatherSkyName;//.text;
                     result.NowSkyCode = currentWeatherSkyCode;//GetWeatherPic(Convert.ToInt32(Math.Round(Convert.ToDouble(currentWeather.skycode.Replace(".",",")))), 4, 22);
                 }
@@ -266,16 +234,7 @@ namespace OpenWeatherMap
                 result.Location = locationcode;//doc.Descendants("city").FirstOrDefault().Attribute("name").Value;
 
                 //parse forecast
-                //var Days = from x in doc.Descendants("forecast")
-                //       select
-                //           new
-                //           {
-                //               l = x.Attribute("low").Value,
-                //               h = x.Attribute("high").Value,
-                //               skycode = x.Attribute("skycodeday").Value,
-                //               text = x.Attribute("skytextday").Value
-                //           };
-
+               
                 var Days1 = (
                    from x in doc.Descendants("time")
                    let xElement = x.Element("temperature")
@@ -285,7 +244,7 @@ namespace OpenWeatherMap
                            temp = xElement.Attribute("value").Value,
                            text = xElement.Attribute("unit").Value,
                            maxtemp = xElement.Attribute("max").Value,
-                           mintemp = xElement.Attribute("min").Value
+                           lowtemp = xElement.Attribute("min").Value
                        }
                    );
 
@@ -303,21 +262,42 @@ namespace OpenWeatherMap
 
 
                 List<DayForecast> f = new List<DayForecast>();
-                foreach (var d in Days1)
+
+                int counter1 = 0;
+                foreach (var d1 in Days1)
                 {
+                    // Пропускаем "зачетверенные" данные по правилу "каж. день лишь 1 данные"  
+                    if (counter1 % 4 == 0)
+                    {
+
+                        f.Add(new DayForecast());
 
 
-                    f.Add(new DayForecast());
+                        f[f.Count - 1].HighTemperature = SpecStrToInt(d1.maxtemp);//Convert.ToInt32(d.maxtemp);
 
-                    // TODO
+                        f[f.Count - 1].LowTemperature = SpecStrToInt(d1.lowtemp);// Convert.ToInt32(d.lowtemp);
 
-                    f[f.Count - 1].HighTemperature = 10;//Convert.ToInt32(d.maxtemp);
+                        //f[f.Count - 1].Text = d1.text;
 
-                    f[f.Count - 1].LowTemperature = 2;// Convert.ToInt32(d.lowtemp);
-                    
-                    f[f.Count - 1].Text = d.text;
-                    
-                    f[f.Count - 1].SkyCode = 1;//GetWeatherPic(Convert.ToInt32(d.skycode), -1, 25);
+                        // f[f.Count - 1].SkyCode = GetWeatherPic(SpecStrToInt(Days2[counter1].skycode), -1, 25);
+
+                        int counter2 = 0;
+
+                        foreach (var d2 in Days2)
+                        {
+                            if (counter1 == counter2)
+                            {
+                                f[f.Count - 1].Text = d2.skyname;
+                                
+                                f[f.Count - 1].SkyCode = GetWeatherPic(SpecStrToInt(d2.skycode), -1, 25);
+
+                                break;
+                            }
+                            counter2++;
+                        }
+                    }
+
+                    counter1++;
                 }
 
                 result.Forecast = f;
@@ -337,27 +317,33 @@ namespace OpenWeatherMap
         {
             switch (skycode)
             {
+                case 804:
                 case 26:
                     if (DateTime.Now.Hour >= sunset || DateTime.Now.Hour <= sunrise)
                         return 34;
                     else
                         return 2;
+                case 803:
                 case 27:
                     if (DateTime.Now.Hour >= sunset || DateTime.Now.Hour <= sunrise)
                         return 35;
                     else
                         return 3;
+                case 802:
                 case 28:
                     if (DateTime.Now.Hour >= sunset || DateTime.Now.Hour <= sunrise)
                         return 38;
                     else
                         return 6;
+                case 801:
                 case 35:
                 case 39:
                     return 12;
+               
                 case 45:
                 case 46:
                     return 8;
+                case 799:
                 case 19:
                 case 20:
                 case 21:
@@ -366,17 +352,20 @@ namespace OpenWeatherMap
                         return 37;
                     else
                         return 11;
+                case 798:
                 case 29:
                 case 30:
                     if (DateTime.Now.Hour >= sunset || DateTime.Now.Hour <= sunrise)
                         return 35;
                     else
                         return 3;
+                case 797:
                 case 33:
                     if (DateTime.Now.Hour >= sunset || DateTime.Now.Hour <= sunrise)
                         return 38;
                     else
                         return 6;
+                case 796:
                 case 5:
                 case 13:
                 case 14:
@@ -397,6 +386,8 @@ namespace OpenWeatherMap
                 case 38:
                 case 47:
                     return 15;
+
+                case 800: // ясно
                 case 31:
                 case 32:
                 case 34:

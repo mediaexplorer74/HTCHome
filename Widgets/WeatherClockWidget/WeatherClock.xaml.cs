@@ -262,7 +262,16 @@ namespace WeatherClockWidget
             else
                 Overlay.Source = null;
 
-            WeatherIcon.Source = new BitmapImage(new Uri(Widget.ResourceManager.GetResourcePath(string.Format("Weather\\weather_{0}.png", weatherReport.NowSkyCode))));
+            try
+            {
+                WeatherIcon.Source = new BitmapImage(new Uri(Widget.ResourceManager.GetResourcePath(string.Format("Weather\\weather_{0}.png", weatherReport.NowSkyCode))));
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("WheatherClock GetResourcePath... skycode exception: " + ex.Message);
+            }
+            
+            
             if (Properties.Settings.Default.ShowIconOnTaskbar)
             {
                 if (!string.IsNullOrEmpty(weatherReport.NowSky))
@@ -814,11 +823,11 @@ namespace WeatherClockWidget
             for (int i = 0; i < ForecastPanel.Children.Count; i++)
             {
                 ForecastItem item = (ForecastItem)ForecastPanel.Children[i];
-                if (weatherReport.Forecast != null && weatherReport.Forecast.Count == 5)
+                if (weatherReport.Forecast != null)// && weatherReport.Forecast.Count == 5)
                 {
                     item.FlipWeather(weatherReport.Forecast[i].SkyCode);
                     item.TemperatureH.Text = weatherReport.Forecast[i].HighTemperature.ToString() + "°";
-                    item.TemperatureL.Text = " " + weatherReport.Forecast[i].LowTemperature.ToString() + "°";
+                    item.TemperatureL.Text = " " + weatherReport.Forecast[i].Text.Substring(0,5);//" " + weatherReport.Forecast[i].Text;//weatherReport.Forecast[i].LowTemperature.ToString() + "°";
                     item.Url = weatherReport.Forecast[i].Url;
                     item.ToolTip = weatherReport.Forecast[i].Text;
                 }

@@ -12,10 +12,10 @@ Platform: Classic Desktop (not UWP)
 Work in sloooowly progress:
 - Little code refacotring / commenting
 - MSN weather provider deleted (Microsoft kills this service?)
-- OpenWeatherMap added (with many restrictions: no weather forcast, only current weather data)
+- OpenWeatherMap weather provider added (weather forcast fixed, but current weather animation suddenly demaged...)
 
 ## Referencies
-- Artem Shuba (Stealth2012)
+- [Artem Shuba](https://github.com/artemshuba) aka Stealth2012, original HTCHome developer 
 
 ## .
 AS IS. No support. RnD only.
