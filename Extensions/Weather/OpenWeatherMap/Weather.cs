@@ -23,22 +23,25 @@ namespace OpenWeatherMap
 {
     public class Weather : IWeatherProvider
     {
-        // Request of location (by City name)
-        private const string RequestForLocation = "https://api.openweathermap.org/data/2.5/weather?q={0}&mode=xml&appid=e60a227a4667049d23504904815bdd54";
+        // Request Current location (by City name)
+        private const string CurrentForLocation = "https://api.openweathermap.org/data/2.5/weather?q={0}&mode=xml&appid=e60a227a4667049d23504904815bdd54";
 
-        // Request of location (by City name and Metric measure unit)
-        private const string RequestForCelsius = "https://api.openweathermap.org/data/2.5/weather?q={1}&mode=xml&lang={0}&units=metric&appid=e60a227a4667049d23504904815bdd54";
-
-        // Request of location (by City name and Imperial measure unit)
+        // Request Current Weather of selected location (by City name and Metric/Imperial measure unit)
+        private const string CurrentForCelsius = "https://api.openweathermap.org/data/2.5/weather?q={1}&mode=xml&lang={0}&units=metric&appid=e60a227a4667049d23504904815bdd54";
         private const string RequestForFahrenheit = "https://api.openweathermap.org/data/2.5/weather?q={1}&mode=xml&lang={0}&units=imperial&appid=e60a227a4667049d23504904815bdd54";
-        
-        
+
+
+        // Request Weather Forecast of selected  location  (by City name and Metric/Imperial measure unit)
+        private const string ForecastForCelsius = "https://api.openweathermap.org/data/2.5/forecast?q={1}&exclude=current,minutely,hourly,alerts&appid=e60a227a4667049d23504904815bdd54&units=metric&lang={0}&mode=xml";
+        private const string ForecastForFahrenheit = "https://api.openweathermap.org/data/2.5/forecast?q={1}&exclude=current,minutely,hourly,alerts&appid=e60a227a4667049d23504904815bdd54&units=imperial&lang={0}&mode=xml";
+
+
         // GetCoordinates
         public Coordinates GetCoordinates(string locationCode)
         {
             var f = new NumberFormatInfo {CurrencyDecimalSeparator = "."};
 
-            var reader = new XmlTextReader(string.Format(RequestForCelsius, "", locationCode));
+            var reader = new XmlTextReader(string.Format(ForecastForCelsius, "", locationCode));
 
             var coord = new Coordinates();
             while (reader.Read())
@@ -68,7 +71,7 @@ namespace OpenWeatherMap
             //TEMP: RnD only.
             //return result;
 
-            string ns = string.Format(RequestForLocation, s);
+            string ns = string.Format(CurrentForLocation, s);
             //string ns = "https://api.openweathermap.org/data/2.5/weather?q={s}&appid=e60a227a4667049d23504904815bdd54&mode=xml";
 
             XmlTextReader reader = null;
@@ -125,16 +128,10 @@ namespace OpenWeatherMap
                 localecode = "ru";
             }
 
-            //if (locale == "en-US")
-            //{
-            //    localecode = "en";
-            //}
-
-            // TEMP, RnD Only
-            //locationcode = "London";
 
 
-            string url = string.Format(degreeType == 0 ? RequestForCelsius : RequestForFahrenheit, localecode, locationcode);
+            //string url = string.Format(degreeType == 0 ? CurrentForCelsius : CurrentForFahrenheit, localecode, locationcode);
+            string url = string.Format(degreeType == 0 ? ForecastForCelsius : ForecastForFahrenheit, localecode, locationcode);
 
             string s = GeneralHelper.GetXml(url);
 
@@ -172,6 +169,7 @@ namespace OpenWeatherMap
                     ).FirstOrDefault();
                 */
 
+                /*
                 var currentWeather =
                     (
                     from x in doc.Descendants("current")
@@ -184,37 +182,142 @@ namespace OpenWeatherMap
                             skycode = xElement.Attribute("max").Value
                         }
                     ).FirstOrDefault();
+                */
+
+                var currentWeather1 =
+                    (
+                    from x in doc.Descendants("time")
+                    let xElement = x.Element("temperature")
+                    select
+                        new
+                        {
+                            temp = xElement.Attribute("value").Value,
+                            unit = xElement.Attribute("unit").Value,
+                            maxtemp = xElement.Attribute("max").Value
+                        }
+                    ).FirstOrDefault();
+
+                // get current temperature
+                string currentWeatherTemp = currentWeather1.temp;
+
+                var currentWeather2 =
+                   (
+                   from x in doc.Descendants("time")
+                   let xElement = x.Element("symbol")
+                   select
+                       new
+                       {
+                           skycode = xElement.Attribute("number").Value,
+                           skyname = xElement.Attribute("name").Value,
+                           icon = xElement.Attribute("var").Value
+                       }
+                   ).FirstOrDefault();
+
+                // get current skycode
+                int currentWeatherSkyCode = Convert.ToInt32(currentWeather2.skycode);
+                
+                // get current skyname
+                string currentWeatherSkyName = currentWeather2.skyname;
 
 
-                if (currentWeather != null)
-                {                    
-                    result.NowTemp = Convert.ToInt32(Math.Round(Convert.ToDouble(currentWeather.temp.Replace(".", ",")), 0));
-                    result.NowSky = currentWeather.text;
-                    result.NowSkyCode = GetWeatherPic(Convert.ToInt32(Math.Round(Convert.ToDouble(currentWeather.skycode.Replace(".",",")))), 4, 22);
+                if (currentWeatherTemp != null)
+                {
+                    string NTemp;
+
+                    //if (localecode == "ru")
+                    //{
+                    //    NTemp = currentWeather.temp.Replace(".", ",");
+                    //}
+                    //else
+                    //{
+                    //    NTemp = currentWeather.temp;
+                    //}
+
+                    char Ch1 = '.';
+                    char Ch2 = ',';
+                    int indexOfCh = 0;
+
+                    indexOfCh = currentWeatherTemp.IndexOf(Ch1);
+
+                    if (indexOfCh > 0)
+                    {
+                        NTemp = currentWeatherTemp.Substring(0, indexOfCh);
+                    }
+                    else
+                    {
+                        NTemp = currentWeatherTemp;
+                    }
+
+                    
+                    indexOfCh = NTemp.IndexOf(Ch2);
+
+                    if (indexOfCh > 0)
+                    {
+                        NTemp = NTemp.Substring(0, indexOfCh);
+                    }
+                   
+
+                    result.NowTemp = Convert.ToInt32(NTemp);//(Math.Round(Convert.ToDouble(NTemp), 0));
+                    result.NowSky = currentWeatherSkyName;//.text;
+                    result.NowSkyCode = currentWeatherSkyCode;//GetWeatherPic(Convert.ToInt32(Math.Round(Convert.ToDouble(currentWeather.skycode.Replace(".",",")))), 4, 22);
                 }
 
 
-                result.Location = doc.Descendants("city").FirstOrDefault().Attribute("name").Value;
+                result.Location = locationcode;//doc.Descendants("city").FirstOrDefault().Attribute("name").Value;
 
                 //parse forecast
-                var days = from x in doc.Descendants("forecast")
-                       select
-                           new
-                           {
-                               l = x.Attribute("low").Value,
-                               h = x.Attribute("high").Value,
-                               skycode = x.Attribute("skycodeday").Value,
-                               text = x.Attribute("skytextday").Value
-                           };
+                //var Days = from x in doc.Descendants("forecast")
+                //       select
+                //           new
+                //           {
+                //               l = x.Attribute("low").Value,
+                //               h = x.Attribute("high").Value,
+                //               skycode = x.Attribute("skycodeday").Value,
+                //               text = x.Attribute("skytextday").Value
+                //           };
+
+                var Days1 = (
+                   from x in doc.Descendants("time")
+                   let xElement = x.Element("temperature")
+                   select
+                       new
+                       {
+                           temp = xElement.Attribute("value").Value,
+                           text = xElement.Attribute("unit").Value,
+                           maxtemp = xElement.Attribute("max").Value,
+                           mintemp = xElement.Attribute("min").Value
+                       }
+                   );
+
+                var Days2 = (
+                   from x in doc.Descendants("time")
+                   let xElement = x.Element("symbol")
+                   select
+                       new
+                       {
+                           skycode = xElement.Attribute("number").Value,
+                           skyname = xElement.Attribute("name").Value,
+                           icon = xElement.Attribute("var").Value
+                       }
+                   );
+
 
                 List<DayForecast> f = new List<DayForecast>();
-                foreach (var d in days)
+                foreach (var d in Days1)
                 {
+
+
                     f.Add(new DayForecast());
-                    f[f.Count - 1].HighTemperature = Convert.ToInt32(d.h);
-                    f[f.Count - 1].LowTemperature = Convert.ToInt32(d.l);
+
+                    // TODO
+
+                    f[f.Count - 1].HighTemperature = 10;//Convert.ToInt32(d.maxtemp);
+
+                    f[f.Count - 1].LowTemperature = 2;// Convert.ToInt32(d.lowtemp);
+                    
                     f[f.Count - 1].Text = d.text;
-                    f[f.Count - 1].SkyCode = GetWeatherPic(Convert.ToInt32(d.skycode), -1, 25);
+                    
+                    f[f.Count - 1].SkyCode = 1;//GetWeatherPic(Convert.ToInt32(d.skycode), -1, 25);
                 }
 
                 result.Forecast = f;

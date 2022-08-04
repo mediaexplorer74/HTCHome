@@ -203,10 +203,10 @@ C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\bin\Debug\Wea
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\bin\Debug\Microsoft.WindowsAPICodePack.dll
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\bin\Debug\HTCHome.Core.pdb
-C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\bin\Debug\WeatherClock.pdb
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\bin\Debug\WeatherClock.dll.config
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\obj\Debug\AccuWeather.csproj.AssemblyReference.cache
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\obj\Debug\AccuWeather.csproj.CoreCompileInputs.cache
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\obj\Debug\AccuWeather.csproj.CopyComplete
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\obj\Debug\AccuWeather.dll
 C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\obj\Debug\AccuWeather.pdb
+C:\Users\media\source\repos\HTCHome\Extensions\Weather\AccuWeather\bin\Debug\WeatherClock.pdb

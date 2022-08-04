@@ -20,6 +20,7 @@ using WeatherClockWidget.Domain;
 using E = HTCHome.Core.Environment;
 using System.IO;
 using System.Xml.Linq;
+using System.Diagnostics;
 
 namespace WeatherClockWidget
 {
@@ -408,7 +409,15 @@ namespace WeatherClockWidget
                 {
                     Widget.Parent.Title = widget.weatherReport.NowSky;
                 }
-                Widget.Parent.Icon = new BitmapImage(new Uri(Widget.ResourceManager.GetResourcePath(string.Format("Weather\\weather_{0}.png", widget.weatherReport.NowSkyCode))));
+
+                try
+                {
+                    Widget.Parent.Icon = new BitmapImage(new Uri(Widget.ResourceManager.GetResourcePath(string.Format("Weather\\weather_{0}.png", widget.weatherReport.NowSkyCode))));
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine("Options - Widget.weatherReport.NowSkyCode Exception: " + ex.Message);
+                }
             }
             else
                 Widget.Parent.ShowInTaskbar = false;

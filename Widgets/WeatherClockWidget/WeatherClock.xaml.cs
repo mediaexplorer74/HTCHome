@@ -835,7 +835,16 @@ namespace WeatherClockWidget
             WeatherIconBg.Source = WeatherIcon.Source;
             WeatherIconBg.Opacity = 1;
             WeatherIcon.Opacity = 0;
-            WeatherIcon.Source = new BitmapImage(new Uri(Widget.ResourceManager.GetResourcePath(string.Format("Weather\\weather_{0}.png", weatherReport.NowSkyCode))));
+
+            WeatherIcon.Source = null;
+            try
+            {
+                WeatherIcon.Source = new BitmapImage(new Uri(Widget.ResourceManager.GetResourcePath(string.Format("Weather\\weather_{0}.png", weatherReport.NowSkyCode))));
+            }
+            catch (Exception ex) 
+            {
+                Debug.WriteLine("WheatherClock - FlipWeatherIcon - ResourceManager.GetResourcePath exception: " + ex.Message);
+            }
             if (Properties.Settings.Default.ChangeBg)
             {
                 //switch bg

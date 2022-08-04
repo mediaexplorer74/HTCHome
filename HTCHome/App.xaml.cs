@@ -116,10 +116,12 @@ namespace HTCHome
                 
             if (!File.Exists(Path + "\\Localization\\" + HTCHome.Properties.Settings.Default.Locale + ".xaml"))
             {
-                if (HTCHome.Properties.Settings.Default.Locale != "en-US" && HTCHome.Properties.Settings.Default.Locale != "ru-RU" &&
-                    IsRemoteFileExists("http://store.htchome.org/localization/home2/" + HTCHome.Properties.Settings.Default.Locale + ".zip"))
+                // * Updates Downloading checks Disabled *
+                
+                if (1==0)//(HTCHome.Properties.Settings.Default.Locale != "en-US" && HTCHome.Properties.Settings.Default.Locale != "ru-RU" &&
+                   // IsRemoteFileExists("http://store.htchome.org/localization/home2/" + HTCHome.Properties.Settings.Default.Locale + ".zip"))
                 {
-                    var w = new LocaleDownloadWindow(HTCHome.Properties.Settings.Default.Locale);
+                    LocaleDownloadWindow w = new LocaleDownloadWindow(HTCHome.Properties.Settings.Default.Locale);
                     w.ShowDialog();
                 }
                 else
@@ -139,6 +141,8 @@ namespace HTCHome
                 Debug.WriteLine("App - Detect CultureInfo Exception : " + ex.Message);
             }
 
+            // * Updates Downloading Routine Disabled *
+            /*
             if (HTCHome.Properties.Settings.Default.EnableUpdates)
             {
                 int build = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileBuildPart;
@@ -157,6 +161,7 @@ namespace HTCHome
                     Debug.WriteLine("! App - IsRemoteFileExists Exception: " + ex.Message);
                 }
             }
+            */
 
             HTCHome.Core.Environment.Root = Path;
             HTCHome.Core.Environment.Path = Path + "\\Widgets";
